@@ -3,10 +3,10 @@
   <channel>
     <title>KBG's Develop Blog</title>
     <description>이력, 공부, 발자취, 느낌, 그 외 모든 것을 위한.</description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 25 Jul 2017 07:48:54 +0900</pubDate>
-    <lastBuildDate>Tue, 25 Jul 2017 07:48:54 +0900</lastBuildDate>
+    <link>http://k4771kim.github.io/</link>
+    <atom:link href="http://k4771kim.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 25 Jul 2017 07:52:57 +0900</pubDate>
+    <lastBuildDate>Tue, 25 Jul 2017 07:52:57 +0900</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -55,8 +55,8 @@
 
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</guid>
+        <link>http://k4771kim.github.io/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</link>
+        <guid isPermaLink="true">http://k4771kim.github.io/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</guid>
         
         
       </item>
@@ -85,8 +85,8 @@
 
 </description>
         <pubDate>Thu, 13 Jul 2017 00:00:00 +0900</pubDate>
-        <link>http://localhost:4000/2017/07/13/KBG's-Git-Blog-Open.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/07/13/KBG's-Git-Blog-Open.html</guid>
+        <link>http://k4771kim.github.io/2017/07/13/KBG's-Git-Blog-Open.html</link>
+        <guid isPermaLink="true">http://k4771kim.github.io/2017/07/13/KBG's-Git-Blog-Open.html</guid>
         
         
       </item>
