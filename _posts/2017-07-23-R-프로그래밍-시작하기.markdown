@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "R 프로그래밍 시작하기"
+---
+
+
+### R ?
+R은 데이터를 분석하는 데 사용되는 무료 소프트웨어이다. 어느 형태의 데이터(텍스트, 이미지, 사운드 등)이든 자유롭게 다양한 형태로 분석이 가능하다.
+
+![R Studio](/assets/sc1.png){:width="70%"}
+
+R 다운로드 : [Here][1]
+
+R Studio 다운로드  : [Here][2]
+### 함수
+
+#### 수
+
+c() - Combine
+
+{% highlight ruby %}
+var1 <- c(1,2,5,7,8) #숫자 5개로 구성된 var1 변수 생성.
+
+var2 <- c(1:8) #숫자 1~8까지 연속 값으로 var2 변수 생성.
+
+{% endhighlight %}
+
+seq()
+
+{% highlight ruby %}
+var3 <- seq(1, 5) #1~5까지 연속 값으로 var3 변수 생성
+
+var4 <- seq(1, 10, by = 2) #1 ~ 10까지 2 간격 연속 값으로 var4 변수 생성.
+
+var5 <- var4 + 4 #여러 값이 속한 변수의 연산도 가능
+{% endhighlight %}
+
+기타
+{% highlight ruby %}
+
+mean(var4) # 평균
+
+max(var4) # 최소값
+
+min(var4) # 최대값
+
+{% endhighlight %}
+
+#### 문자열
+
+{% highlight ruby %}
+
+str1 = "HI"
+
+str2 = c("Hello", "World!")
+
+str3 <- paste(str2, collapse = ",") # 다수의 문자을 하나의 문자열로 출력
+
+{% endhighlight %}
+
+[1]: http://healthstat.snu.ac.kr/CRAN/
+[2]: https://www.rstudio.com/products/rstudio/download3/
