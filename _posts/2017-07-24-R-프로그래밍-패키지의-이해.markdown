@@ -1,0 +1,46 @@
+---
+layout: post
+title:  "R 프로그래밍 - 패키지의 이해"
+---
+
+### 패키지?
+여러가지 함수를 포함한 꾸러미. (라이브러리라고 생각하면 될 것 같다.)
+
+이 책에는 ggplot2 패키지에 대해 설명하고 있다. 상황에 따라 다양한 패키지를 사용할 수 있을 것 같다.
+
+패키지 설치 & 로드
+{% highlight ruby %}
+
+install.packages("ggplog2") # 패키지 설치
+
+library(ggplot2) # 패키지 로드
+
+{% endhighlight %}
+
+
+ggplot2 함수 사용 및 예제 데이터 활용
+
+{% highlight ruby %}
+
+qplot(x) # 빈도 막대 그래프 출력
+
+qplot(data = mpg, x = hwy) # 예제 데이터 mpg를 사용. x축에 hwy변수를 지정 
+
+qplot(data = mpg, x = drv, y = hwy , geom = "line") # 선 그래프 형태
+
+qplot(data = mpg, x = drv, y = hwy , geom = "boxplot") # 상자 그림 형태
+
+qplot(data = mpg, x = drv, y = hwy , geom = "boxplot", colour = drv) # drv별 색 표현
+{% endhighlight %}
+
+함수의 기능에 대한 설명이 필요할때
+{% highlight ruby %}
+
+?qplot
+
+{% endhighlight %}
+역시 API를 참조하는게 가장 좋은 것 같다
+
+docs : [HERE][1]
+
+[1]: http://ggplot2.tidyverse.org/reference/
