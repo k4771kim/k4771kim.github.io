@@ -3,10 +3,10 @@
   <channel>
     <title>KBG's Develop Blog</title>
     <description>이력, 공부, 발자취, 느낌, 그 외 모든 것을 위한.</description>
-    <link>http://k4771kim.github.io/</link>
-    <atom:link href="http://k4771kim.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 04 Aug 2017 19:56:48 +0900</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2017 19:56:48 +0900</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 04 Aug 2017 19:58:31 +0900</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 19:58:31 +0900</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -65,8 +65,8 @@
 &lt;p&gt;내일은 본격적으로 어플리케이션을 만들어 보기 전에 코틀린의 기초적인 문법에 대해 공부하기로 하겠다.&lt;/p&gt;
 </description>
         <pubDate>Thu, 03 Aug 2017 00:00:00 +0900</pubDate>
-        <link>http://k4771kim.github.io/2017/08/03/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World.html</link>
-        <guid isPermaLink="true">http://k4771kim.github.io/2017/08/03/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World.html</guid>
+        <link>http://localhost:4000/2017/08/03/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/03/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World.html</guid>
         
         
       </item>
@@ -119,8 +119,8 @@
 &lt;br /&gt;내일부터는 Java와 Kotlin 문법을 비교하며 간단한 Android App을 제작해 보면서 이 아이의 매력을 느껴보도록 하겠다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 01 Aug 2017 00:00:00 +0900</pubDate>
-        <link>http://k4771kim.github.io/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Kotlin-!.html</link>
-        <guid isPermaLink="true">http://k4771kim.github.io/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Kotlin-!.html</guid>
+        <link>http://localhost:4000/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Kotlin-!.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Kotlin-!.html</guid>
         
         
       </item>
@@ -193,8 +193,8 @@
 
 </description>
         <pubDate>Tue, 25 Jul 2017 00:00:00 +0900</pubDate>
-        <link>http://k4771kim.github.io/2017/07/25/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7.html</link>
-        <guid isPermaLink="true">http://k4771kim.github.io/2017/07/25/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7.html</guid>
+        <link>http://localhost:4000/2017/07/25/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/25/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A6%E1%84%8B%E1%85%B5%E1%86%B7.html</guid>
         
         
       </item>
@@ -234,8 +234,8 @@
 
 </description>
         <pubDate>Mon, 24 Jul 2017 00:00:00 +0900</pubDate>
-        <link>http://k4771kim.github.io/2017/07/24/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%B4-%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A2.html</link>
-        <guid isPermaLink="true">http://k4771kim.github.io/2017/07/24/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%B4-%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A2.html</guid>
+        <link>http://localhost:4000/2017/07/24/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%B4-%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A2.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/24/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%91%E1%85%A2%E1%84%8F%E1%85%B5%E1%84%8C%E1%85%B5%E1%84%8B%E1%85%B4-%E1%84%8B%E1%85%B5%E1%84%92%E1%85%A2.html</guid>
         
         
       </item>
@@ -293,8 +293,8 @@
 
 </description>
         <pubDate>Sun, 23 Jul 2017 00:00:00 +0900</pubDate>
-        <link>http://k4771kim.github.io/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</link>
-        <guid isPermaLink="true">http://k4771kim.github.io/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</guid>
+        <link>http://localhost:4000/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/23/R-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-%E1%84%89%E1%85%B5%E1%84%8C%E1%85%A1%E1%86%A8%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5.html</guid>
         
         
       </item>
@@ -323,8 +323,8 @@
 
 </description>
         <pubDate>Thu, 13 Jul 2017 00:00:00 +0900</pubDate>
-        <link>http://k4771kim.github.io/2017/07/13/KBG's-Git-Blog-Open.html</link>
-        <guid isPermaLink="true">http://k4771kim.github.io/2017/07/13/KBG's-Git-Blog-Open.html</guid>
+        <link>http://localhost:4000/2017/07/13/KBG's-Git-Blog-Open.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/07/13/KBG's-Git-Blog-Open.html</guid>
         
         
       </item>
