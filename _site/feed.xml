@@ -5,12 +5,74 @@
     <description>이력, 공부, 발자취, 느낌, 그 외 모든 것을 위한.</description>
     <link>http://k4771kim.github.io/</link>
     <atom:link href="http://k4771kim.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 01 Aug 2017 12:41:47 +0900</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2017 12:41:47 +0900</lastBuildDate>
+    <pubDate>Fri, 04 Aug 2017 19:56:48 +0900</pubDate>
+    <lastBuildDate>Fri, 04 Aug 2017 19:56:48 +0900</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Android Kotlin 프로그래밍 - Hello World!</title>
+        <description>&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;그럼 Kotlin을 지원하는 안드로이드스튜디오 3.0(Beta)을 사용하여 모바일에 Hello World를 출력하는 앱을 생성해 보겠다.&lt;/p&gt;
+
+&lt;p&gt;안드로이드 스튜디오의 메뉴에서 New Project를 선택, 체크박스 Include Kotlin support를 체크하고 새로운 Project를 생성했다.&lt;/p&gt;
+
+&lt;p&gt;자바를 지원하는 기존의 프로젝트 생성과 다르게 프로젝트 플더의 java폴더 안에(?) MainActivity.kt가 생성된 것을 볼 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;코틀린을 본격적으로 공부하기 전에 자바 코드와 코틀린 코드를 간단히 비교해보면 도움이 될 것 같다.&lt;/p&gt;
+
+&lt;p&gt;기본으로 생성 된 파일 중 MainActivity 파일을 비교해 보도록 하겠다.
+&lt;br /&gt;
+&lt;strong&gt;Java&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;foroom&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;kbg&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;javaapp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.support.v7.app.AppCompatActivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.os.Bundle&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppCompatActivity&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;nd&quot;&gt;@Override&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Bundle&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Kotlin&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-kotlin highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;foroom.kbg.myfirstkotlinapp&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.support.v7.app.AppCompatActivity&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;android.os.Bundle&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MainActivity&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;AppCompatActivity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; 
+
+    &lt;span class=&quot;k&quot;&gt;override&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Bundle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;?)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;onCreate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;savedInstanceState&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;setContentView&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;R&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;layout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;activity_main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;문법적인 부분의 차이는 대략적으로 비교해 볼 수 있었다.&lt;/p&gt;
+
+&lt;p&gt;클래스, 메소드 정의 방법이 다르고 코틀린은 세미콜론이 필요 없다는 것 정도?&lt;/p&gt;
+
+&lt;p&gt;모바일에 Build - Run 하는 부분은 다를 것이 없었다.&lt;/p&gt;
+
+&lt;p&gt;내일은 본격적으로 어플리케이션을 만들어 보기 전에 코틀린의 기초적인 문법에 대해 공부하기로 하겠다.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Aug 2017 00:00:00 +0900</pubDate>
+        <link>http://k4771kim.github.io/2017/08/03/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World.html</link>
+        <guid isPermaLink="true">http://k4771kim.github.io/2017/08/03/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Android Kotlin 프로그래밍 - Kotlin?</title>
         <description>&lt;p&gt;&lt;br /&gt;
 2017년 봄, 구글이 Google I/O를 통해 Kotlin을 안드로이드 공식 개발 언어로 지원하겠다고 발표했다. &lt;br /&gt;
 작년부터 안드로이드의 두번째 공식 주사용 언어로 Swift가 선택 되기를 기대했던 나는 조금 실망했다. 이렇게 또 안드로이드와 IOS는 다른 길을 걷게 되는구나. 하지만 안드로이드 개발자답게 Kotlin을 익혀야겠지. 구글이 선택한 이 언어에 대해 간단히 훑어보기 시작했다. 대체 구글이 왜? 인지도 적은 Kotlin을?&lt;/p&gt;
@@ -20,7 +82,7 @@
 &lt;p&gt;Kotlin은 Jet Brains(설마 그래서 구글이..!!) 에서 개발한 출범한지 6년이나 된 JVM 기반의 프로그래밍 언어이다. Java와 마찬가지로 소스코드를 컴파일하면 바이트코드(.class)가 생성된다. Java에서 작성된 클래스를 Kotlin에서 참조하거나, 그 반대로도 가능하다. 이쯤되면 Java를 대체하기 위해 개발된 언어라고 봐도 무방하지 싶다. 왜 굳이 잘 쓰고 있는 Java가 있는데 왜 Kotlin을!? 그리고 왜 개발자들은 구글의 이러한 선택에 긍정적인 반응인걸까?
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;은 이러한 이유가 아닐까?&lt;/p&gt;
+&lt;p&gt;는 이러한 이유때문이 아닐까?&lt;/p&gt;
 
 &lt;h5 id=&quot;null-safety&quot;&gt;Null Safety!!&lt;/h5&gt;
 
@@ -50,11 +112,15 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;기존의 많은 안드로이드 개발자들이 혹할만 했다. 이 외에도 언어적/기술적으로 성숙도가 높다고 한다. 그래도 새로운 언어를 익혀야 할 정도로? 과연 기존 개발자들이 오랜 역사와 미친 점유율을 자랑하는 Java에서 듣도보도못한 Kotlin으로 환승할까 싶기도 하다. 과연 구글이 얼마나 강력하게 이 언어를 밀어줄지. 과연 IOS의 Swift처럼 될 수 있을지. 이 언어의 가능성은 어디까지일지. 지금 구글의 뜨드미지근한 반응을 보면 아직은 잘 모르겠다(내생각~). 내일부터는 Java와 Kotlin 문법을 비교하며 간단한 Android App을 제작해 보면서 이 아이의 매력을 느껴보도록 하겠다.&lt;/p&gt;
+&lt;p&gt;기존의 많은 안드로이드 개발자들이 혹할만 하다. 이 외에도 언어적/기술적으로 성숙도가 높다고 한다.&lt;br /&gt;
+그래도 많은 개발자들이 새로운 언어를 익혀야 할 정도로? 과연 기존 개발자들이 오랜 역사와 미친 점유율을 자랑하는 Java에서 듣도보도 못한 Kotlin으로 환승할까?&lt;br /&gt;
+과연 구글이 얼마나 강력하게 이 언어를 밀어줄지. 과연 IOS의 Swift처럼 될 수 있을지. 이 언어의 가능성은 어디까지일지.&lt;br /&gt;
+지금 구글의 뜨뜻미지근한 입장을 보면 아직은 잘 모르겠다(내생각~).
+&lt;br /&gt;내일부터는 Java와 Kotlin 문법을 비교하며 간단한 Android App을 제작해 보면서 이 아이의 매력을 느껴보도록 하겠다.&lt;/p&gt;
 </description>
         <pubDate>Tue, 01 Aug 2017 00:00:00 +0900</pubDate>
-        <link>http://k4771kim.github.io/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World!.html</link>
-        <guid isPermaLink="true">http://k4771kim.github.io/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Hello-World!.html</guid>
+        <link>http://k4771kim.github.io/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Kotlin-!.html</link>
+        <guid isPermaLink="true">http://k4771kim.github.io/2017/08/01/Android-Kotlin-%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%80%E1%85%B3%E1%84%85%E1%85%A2%E1%84%86%E1%85%B5%E1%86%BC-Kotlin-!.html</guid>
         
         
       </item>
