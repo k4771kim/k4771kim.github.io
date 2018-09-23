@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,49 +15,52 @@
 </head>
 
 
-  <body>
-      <div class="outer">
-        <header class="site-header">
+<body>
+  <div class="outer">
+    <header class="site-header">
 
-  <div class="wrapper">
+      <div class="wrapper">
 
-    <a class="site-title" href="/">KBG's Develop Blog</a>
-    
-  </div>
+        <a class="site-title" href="/">KBG's Develop Blog</a>
 
-  <div class="header-badge">
-    <a href="/">
-        <img src="/assets/profile.png" />
-    </a>
-  </div>
-    
-</header>
+      </div>
+
+      <div class="header-badge">
+        <a href="/">
+          <img src="/assets/profile4.png" />
+        </a>
+      </div>
+
+    </header>
 
 
-        <div class="page-content">
-          <div class="wrapper">
-            <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
- <div class="card-content">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">R 프로그래밍 - 패키지의 이해</h1>
-    <p class="post-meta"><time datetime="2017-07-24T00:00:00+09:00" itemprop="datePublished">Jul 24, 2017</time></p>
-  </header>
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
+          <div class="card-content">
+            <header class="post-header">
+              <h1 class="post-title" itemprop="name headline">R 프로그래밍 - 패키지의 이해</h1>
+              <p class="post-meta"><time datetime="2017-07-24T00:00:00+09:00" itemprop="datePublished">Jul 24, 2017</time></p>
+            </header>
 
-  <div class="post-content" itemprop="articleBody">
-    <h3 id="패키지">패키지?</h3>
-<p>여러가지 함수를 포함한 꾸러미. (라이브러리라고 생각하면 될 것 같다.)</p>
+            <div class="post-content" itemprop="articleBody">
+              <h3 id="패키지">패키지?</h3>
+              <p>여러가지 함수를 포함한 꾸러미. (라이브러리라고 생각하면 될 것 같다.)</p>
 
-<p>이 책에는 ggplot2 패키지에 대해 설명하고 있다. 상황에 따라 다양한 패키지를 사용할 수 있을 것 같다.</p>
+              <p>이 책에는 ggplot2 패키지에 대해 설명하고 있다. 상황에 따라 다양한 패키지를 사용할 수 있을 것 같다.</p>
 
-<p>패키지 설치 &amp; 로드</p>
+              <p>패키지 설치 &amp; 로드</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">install</span><span class="p">.</span><span class="nf">packages</span><span class="p">(</span><span class="s2">"ggplog2"</span><span class="p">)</span> <span class="c1"># 패키지 설치</span>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="n">install</span><span class="p">.</span><span class="nf">packages</span><span class="p">(</span><span class="s2">"ggplog2"</span><span class="p">)</span> <span class="c1"># 패키지 설치</span>
 
-<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span> <span class="c1"># 패키지 로드</span></code></pre></figure>
+<span class="n">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span> <span class="c1"># 패키지 로드</span></code></pre>
+              </figure>
 
-<p>ggplot2 함수 사용 및 예제 데이터 활용</p>
+              <p>ggplot2 함수 사용 및 예제 데이터 활용</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">qplot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 빈도 막대 그래프 출력</span>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="n">qplot</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># 빈도 막대 그래프 출력</span>
 
 <span class="n">qplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">mpg</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">hwy</span><span class="p">)</span> <span class="c1"># 예제 데이터 mpg를 사용. x축에 hwy변수를 지정 </span>
 
@@ -65,35 +68,38 @@
 
 <span class="n">qplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">mpg</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">drv</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">hwy</span> <span class="p">,</span> <span class="n">geom</span> <span class="o">=</span> <span class="s2">"boxplot"</span><span class="p">)</span> <span class="c1"># 상자 그림 형태</span>
 
-<span class="n">qplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">mpg</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">drv</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">hwy</span> <span class="p">,</span> <span class="n">geom</span> <span class="o">=</span> <span class="s2">"boxplot"</span><span class="p">,</span> <span class="n">colour</span> <span class="o">=</span> <span class="n">drv</span><span class="p">)</span> <span class="c1"># drv별 색 표현</span></code></pre></figure>
+<span class="n">qplot</span><span class="p">(</span><span class="n">data</span> <span class="o">=</span> <span class="n">mpg</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">drv</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">hwy</span> <span class="p">,</span> <span class="n">geom</span> <span class="o">=</span> <span class="s2">"boxplot"</span><span class="p">,</span> <span class="n">colour</span> <span class="o">=</span> <span class="n">drv</span><span class="p">)</span> <span class="c1"># drv별 색 표현</span></code></pre>
+              </figure>
 
-<p>함수의 기능에 대한 설명이 필요할때</p>
+              <p>함수의 기능에 대한 설명이 필요할때</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="p">?</span><span class="n">qplot</span></code></pre></figure>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="p">?</span><span class="n">qplot</span></code></pre>
+              </figure>
 
-<p>역시 API를 참조하는게 가장 좋은 것 같다</p>
+              <p>역시 API를 참조하는게 가장 좋은 것 같다</p>
 
-<p>docs : <a href="http://ggplot2.tidyverse.org/reference/">HERE</a></p>
+              <p>docs : <a href="http://ggplot2.tidyverse.org/reference/">HERE</a></p>
 
 
-  </div>
-</div>
-</article>
-
+            </div>
           </div>
-        </div>
-
-        <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <span class="footer-heading">KBG's Develop Blog</span>
-
-  </div>
-
-</footer>
+        </article>
 
       </div>
-  </body>
-  
+    </div>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+        <span class="footer-heading">KBG's Develop Blog</span>
+
+      </div>
+
+    </footer>
+
+  </div>
+</body>
+
 </html>

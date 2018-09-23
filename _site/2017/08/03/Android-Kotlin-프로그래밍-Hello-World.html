@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,49 +15,50 @@
 </head>
 
 
-  <body>
-      <div class="outer">
-        <header class="site-header">
+<body>
+  <div class="outer">
+    <header class="site-header">
 
-  <div class="wrapper">
+      <div class="wrapper">
 
-    <a class="site-title" href="/">KBG's Develop Blog</a>
-    
-  </div>
+        <a class="site-title" href="/">KBG's Develop Blog</a>
 
-  <div class="header-badge">
-    <a href="/">
-        <img src="/assets/profile.png" />
-    </a>
-  </div>
-    
-</header>
+      </div>
+
+      <div class="header-badge">
+        <a href="/">
+          <img src="/assets/profile4.png" />
+        </a>
+      </div>
+
+    </header>
 
 
-        <div class="page-content">
-          <div class="wrapper">
-            <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
- <div class="card-content">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">Android Kotlin 프로그래밍 - Hello World!</h1>
-    <p class="post-meta"><time datetime="2017-08-03T00:00:00+09:00" itemprop="datePublished">Aug 3, 2017</time></p>
-  </header>
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
+          <div class="card-content">
+            <header class="post-header">
+              <h1 class="post-title" itemprop="name headline">Android Kotlin 프로그래밍 - Hello World!</h1>
+              <p class="post-meta"><time datetime="2017-08-03T00:00:00+09:00" itemprop="datePublished">Aug 3, 2017</time></p>
+            </header>
 
-  <div class="post-content" itemprop="articleBody">
-    <p><br /></p>
+            <div class="post-content" itemprop="articleBody">
+              <p><br /></p>
 
-<p>그럼 Kotlin을 지원하는 안드로이드스튜디오 3.0(Beta)을 사용하여 모바일에 Hello World를 출력하는 앱을 생성해 보겠다.</p>
+              <p>그럼 Kotlin을 지원하는 안드로이드스튜디오 3.0(Beta)을 사용하여 모바일에 Hello World를 출력하는 앱을 생성해 보겠다.</p>
 
-<p>안드로이드 스튜디오의 메뉴에서 New Project를 선택, 체크박스 Include Kotlin support를 체크하고 새로운 Project를 생성했다.</p>
+              <p>안드로이드 스튜디오의 메뉴에서 New Project를 선택, 체크박스 Include Kotlin support를 체크하고 새로운 Project를 생성했다.</p>
 
-<p>자바를 지원하는 기존의 프로젝트 생성과 다르게 프로젝트 플더의 java폴더 안에(?) MainActivity.kt가 생성된 것을 볼 수 있었다.</p>
+              <p>자바를 지원하는 기존의 프로젝트 생성과 다르게 프로젝트 플더의 java폴더 안에(?) MainActivity.kt가 생성된 것을 볼 수 있었다.</p>
 
-<p>코틀린을 본격적으로 공부하기 전에 자바 코드와 코틀린 코드를 간단히 비교해보면 도움이 될 것 같다.</p>
+              <p>코틀린을 본격적으로 공부하기 전에 자바 코드와 코틀린 코드를 간단히 비교해보면 도움이 될 것 같다.</p>
 
-<p>기본으로 생성 된 파일 중 MainActivity 파일을 비교해 보도록 하겠다.
-<br />
-<strong>Java</strong></p>
-<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">package</span> <span class="n">foroom</span><span class="o">.</span><span class="na">kbg</span><span class="o">.</span><span class="na">javaapp</span><span class="o">;</span>
+              <p>기본으로 생성 된 파일 중 MainActivity 파일을 비교해 보도록 하겠다.
+                <br />
+                <strong>Java</strong></p>
+              <div class="language-java highlighter-rouge">
+                <pre class="highlight"><code><span class="kn">package</span> <span class="n">foroom</span><span class="o">.</span><span class="na">kbg</span><span class="o">.</span><span class="na">javaapp</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">android.os.Bundle</span><span class="o">;</span>
@@ -71,10 +72,11 @@
     <span class="o">}</span>
 <span class="o">}</span>
 </code></pre>
-</div>
+              </div>
 
-<p><strong>Kotlin</strong></p>
-<div class="language-kotlin highlighter-rouge"><pre class="highlight"><code><span class="k">package</span> <span class="nn">foroom.kbg.myfirstkotlinapp</span>
+              <p><strong>Kotlin</strong></p>
+              <div class="language-kotlin highlighter-rouge">
+                <pre class="highlight"><code><span class="k">package</span> <span class="nn">foroom.kbg.myfirstkotlinapp</span>
 
 <span class="k">import</span> <span class="nn">android.support.v7.app.AppCompatActivity</span>
 <span class="k">import</span> <span class="nn">android.os.Bundle</span>
@@ -87,34 +89,34 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-</div>
+              </div>
 
-<p>문법적인 부분의 차이는 대략적으로 비교해 볼 수 있었다.</p>
+              <p>문법적인 부분의 차이는 대략적으로 비교해 볼 수 있었다.</p>
 
-<p>클래스, 메소드 정의 방법이 다르고 코틀린은 세미콜론이 필요 없다는 것 정도?</p>
+              <p>클래스, 메소드 정의 방법이 다르고 코틀린은 세미콜론이 필요 없다는 것 정도?</p>
 
-<p>모바일에 Build - Run 하는 부분은 다를 것이 없었다.</p>
+              <p>모바일에 Build - Run 하는 부분은 다를 것이 없었다.</p>
 
-<p>내일은 본격적으로 어플리케이션을 만들어 보기 전에 코틀린의 기초적인 문법에 대해 공부하기로 하겠다.</p>
+              <p>내일은 본격적으로 어플리케이션을 만들어 보기 전에 코틀린의 기초적인 문법에 대해 공부하기로 하겠다.</p>
 
-  </div>
-</div>
-</article>
-
+            </div>
           </div>
-        </div>
-
-        <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <span class="footer-heading">KBG's Develop Blog</span>
-
-  </div>
-
-</footer>
+        </article>
 
       </div>
-  </body>
-  
+    </div>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+        <span class="footer-heading">KBG's Develop Blog</span>
+
+      </div>
+
+    </footer>
+
+  </div>
+</body>
+
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,103 +15,111 @@
 </head>
 
 
-  <body>
-      <div class="outer">
-        <header class="site-header">
+<body>
+  <div class="outer">
+    <header class="site-header">
 
-  <div class="wrapper">
+      <div class="wrapper">
 
-    <a class="site-title" href="/">KBG's Develop Blog</a>
-    
-  </div>
+        <a class="site-title" href="/">KBG's Develop Blog</a>
 
-  <div class="header-badge">
-    <a href="/">
-        <img src="/assets/profile.png" />
-    </a>
-  </div>
-    
-</header>
+      </div>
+
+      <div class="header-badge">
+        <a href="/">
+          <img src="/assets/profile4.png" />
+        </a>
+      </div>
+
+    </header>
 
 
-        <div class="page-content">
-          <div class="wrapper">
-            <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
- <div class="card-content">
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">R 프로그래밍 - 시작하기</h1>
-    <p class="post-meta"><time datetime="2017-07-23T00:00:00+09:00" itemprop="datePublished">Jul 23, 2017</time></p>
-  </header>
+    <div class="page-content">
+      <div class="wrapper">
+        <article class="post card" itemscope itemtype="http://schema.org/BlogPosting">
+          <div class="card-content">
+            <header class="post-header">
+              <h1 class="post-title" itemprop="name headline">R 프로그래밍 - 시작하기</h1>
+              <p class="post-meta"><time datetime="2017-07-23T00:00:00+09:00" itemprop="datePublished">Jul 23, 2017</time></p>
+            </header>
 
-  <div class="post-content" itemprop="articleBody">
-    <h3 id="r-">R ?</h3>
-<p>R은 데이터를 분석하는 데 사용되는 무료 소프트웨어이다. 어느 형태의 데이터(텍스트, 이미지, 사운드 등)이든 자유롭게 다양한 형태로 분석이 가능하다.</p>
+            <div class="post-content" itemprop="articleBody">
+              <h3 id="r-">R ?</h3>
+              <p>R은 데이터를 분석하는 데 사용되는 무료 소프트웨어이다. 어느 형태의 데이터(텍스트, 이미지, 사운드 등)이든 자유롭게 다양한 형태로 분석이 가능하다.</p>
 
-<p><img src="/assets/sc1.png" alt="R Studio" width="70%" /></p>
+              <p><img src="/assets/sc1.png" alt="R Studio" width="70%" /></p>
 
-<p>R 다운로드 : <a href="http://healthstat.snu.ac.kr/CRAN/">Here</a></p>
+              <p>R 다운로드 : <a href="http://healthstat.snu.ac.kr/CRAN/">Here</a></p>
 
-<p>R Studio 다운로드  : <a href="https://www.rstudio.com/products/rstudio/download3/">Here</a></p>
+              <p>R Studio 다운로드 : <a href="https://www.rstudio.com/products/rstudio/download3/">Here</a></p>
 
-<p>책 ‘Do it! 쉽게 배우는 R 데이터 분석’ 을 참고한다.</p>
+              <p>책 ‘Do it! 쉽게 배우는 R 데이터 분석’ 을 참고한다.</p>
 
-<h3 id="함수">함수</h3>
+              <h3 id="함수">함수</h3>
 
-<h4 id="수">수</h4>
+              <h4 id="수">수</h4>
 
-<p>c() - Combine</p>
+              <p>c() - Combine</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var1</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="c1">#숫자 5개로 구성된 var1 변수 생성.</span>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="n">var1</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span> <span class="c1">#숫자 5개로 구성된 var1 변수 생성.</span>
 
-<span class="n">var2</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span> <span class="c1">#숫자 1~8까지 연속 값으로 var2 변수 생성.</span></code></pre></figure>
+<span class="n">var2</span> <span class="o">&lt;-</span> <span class="n">c</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">8</span><span class="p">)</span> <span class="c1">#숫자 1~8까지 연속 값으로 var2 변수 생성.</span></code></pre>
+              </figure>
 
-<p>seq()</p>
+              <p>seq()</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">var3</span> <span class="o">&lt;-</span> <span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">#1~5까지 연속 값으로 var3 변수 생성</span>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="n">var3</span> <span class="o">&lt;-</span> <span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="c1">#1~5까지 연속 값으로 var3 변수 생성</span>
 
 <span class="n">var4</span> <span class="o">&lt;-</span> <span class="n">seq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">by</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">#1 ~ 10까지 2 간격 연속 값으로 var4 변수 생성.</span>
 
-<span class="n">var5</span> <span class="o">&lt;-</span> <span class="n">var4</span> <span class="o">+</span> <span class="mi">4</span> <span class="c1">#여러 값이 속한 변수의 연산도 가능</span></code></pre></figure>
+<span class="n">var5</span> <span class="o">&lt;-</span> <span class="n">var4</span> <span class="o">+</span> <span class="mi">4</span> <span class="c1">#여러 값이 속한 변수의 연산도 가능</span></code></pre>
+              </figure>
 
-<p>기타</p>
+              <p>기타</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">mean</span><span class="p">(</span><span class="n">var4</span><span class="p">)</span> <span class="c1"># 평균</span>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="n">mean</span><span class="p">(</span><span class="n">var4</span><span class="p">)</span> <span class="c1"># 평균</span>
 
 <span class="n">max</span><span class="p">(</span><span class="n">var4</span><span class="p">)</span> <span class="c1"># 최소값</span>
 
-<span class="n">min</span><span class="p">(</span><span class="n">var4</span><span class="p">)</span> <span class="c1"># 최대값</span></code></pre></figure>
+<span class="n">min</span><span class="p">(</span><span class="n">var4</span><span class="p">)</span> <span class="c1"># 최대값</span></code></pre>
+              </figure>
 
-<h4 id="문자열">문자열</h4>
+              <h4 id="문자열">문자열</h4>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">str1</span> <span class="o">=</span> <span class="s2">"HI"</span>
+              <figure class="highlight">
+                <pre><code class="language-ruby" data-lang="ruby"><span class="n">str1</span> <span class="o">=</span> <span class="s2">"HI"</span>
 
 <span class="n">str2</span> <span class="o">=</span> <span class="n">c</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">,</span> <span class="s2">"World!"</span><span class="p">)</span>
 
-<span class="n">str3</span> <span class="o">&lt;-</span> <span class="n">paste</span><span class="p">(</span><span class="n">str2</span><span class="p">,</span> <span class="n">collapse</span> <span class="o">=</span> <span class="s2">","</span><span class="p">)</span> <span class="c1"># 다수의 문자을 하나의 문자열로 출력</span></code></pre></figure>
+<span class="n">str3</span> <span class="o">&lt;-</span> <span class="n">paste</span><span class="p">(</span><span class="n">str2</span><span class="p">,</span> <span class="n">collapse</span> <span class="o">=</span> <span class="s2">","</span><span class="p">)</span> <span class="c1"># 다수의 문자을 하나의 문자열로 출력</span></code></pre>
+              </figure>
 
-<p>오늘은 간단히 R IDE의 사용법에 대해 공부했다.</p>
+              <p>오늘은 간단히 R IDE의 사용법에 대해 공부했다.</p>
 
-<p>다음은 패키지를 활용하여 DB를 시각적으로 표현하는 방법에 대해 배울 것 같다.</p>
+              <p>다음은 패키지를 활용하여 DB를 시각적으로 표현하는 방법에 대해 배울 것 같다.</p>
 
 
-  </div>
-</div>
-</article>
-
+            </div>
           </div>
-        </div>
-
-        <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <span class="footer-heading">KBG's Develop Blog</span>
-
-  </div>
-
-</footer>
+        </article>
 
       </div>
-  </body>
-  
+    </div>
+
+    <footer class="site-footer">
+
+      <div class="wrapper">
+
+        <span class="footer-heading">KBG's Develop Blog</span>
+
+      </div>
+
+    </footer>
+
+  </div>
+</body>
+
 </html>
