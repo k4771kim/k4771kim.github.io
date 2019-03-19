@@ -12,6 +12,7 @@ permalink: /history/
 | 2016. 02. |  |  | 어플리케이션 '포룸 인테리어' 개발 |  |  |  [BackEnd][5], [Android][6]
 | 2016. 07. |  |  | '런차이 20 프로젝트' 창업경연대회 '우수상' |  |  |
 | 2016. 10. |  |  | '청년창업생태계조성사업 2016' A등급 성공 수료 |  |  |  
+| 2018. 11. |  |  | Elice App |  |  |  ReactNative[elice-editor][7]
 
 [1]: https://github.com/k4771kim/VoiceOfThousands
 [2]: https://github.com/k4771kim/RecipediaBackend
@@ -19,3 +20,4 @@ permalink: /history/
 [4]: https://github.com/k4771kim/Ardrumoid
 [5]: https://github.com/k4771kim/FoRoomBackend
 [6]: https://github.com/k4771kim/FoRoomAndroid
+[7]: https://github.com/k4771kim/react-native-elice-editor
