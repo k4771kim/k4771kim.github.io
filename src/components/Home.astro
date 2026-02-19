@@ -4,6 +4,24 @@ import SkillsList from "../React/SkillsList.tsx";
 import { Image } from 'astro:assets';
 import profileImg from '../assets/profile2.png';
 
+const techStack = [
+  { name: 'React Native', icon: '/svg/react.svg' },
+  { name: 'Flutter', icon: '/svg/flutter.svg' },
+  { name: 'React', icon: '/svg/react.svg' },
+  { name: 'Android', icon: '/svg/android.svg' },
+  { name: 'Node.js', icon: '/svg/nodejs.svg' },
+  { name: 'MongoDB', icon: '/svg/mongodb.svg' },
+  { name: 'MariaDB', icon: '/svg/mariadb.svg' },
+  { name: 'PostgreSQL', icon: '/svg/postsql.svg' },
+  { name: 'Redis', icon: '/svg/redis.svg' },
+  { name: 'Kubernetes', icon: '/svg/kubernetes.svg' },
+  { name: 'Docker', icon: '/svg/docker.svg' },
+  { name: 'GCP', icon: '/svg/gcp.svg' },
+  { name: 'AWS', icon: '/svg/aws.svg' },
+  { name: 'Arduino', icon: '/svg/arduino.svg' },
+  { name: 'TypeScript', icon: '/svg/typescript.svg' },
+];
+
 const humanDesignData = {
   "type": "Manifestor",
   "profile": "6/2",
@@ -167,7 +185,7 @@ const humanDesignData = {
 };
 ---
 
-<section class="text-[var(--white)] mt-12 md:mt-0 relative min-h-screen flex items-center overflow-x-hidden overflow-y-visible" id="home">
+<section class="text-[var(--white)] mt-12 md:mt-0 relative overflow-x-hidden overflow-y-visible" id="home">
   <!-- Background Effects -->
   <div class="absolute top-1/4 -left-20 w-96 h-96 bg-[#5b13ec]/20 rounded-full blur-[120px] pointer-events-none" />
   <div class="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-[#5b13ec]/10 rounded-full blur-[150px] pointer-events-none" />
@@ -188,12 +206,12 @@ const humanDesignData = {
         <h1
           class="text-[var(--white)] text-5xl md:text-6xl font-medium text-pretty leading-none"
         >
-          Mobile <br /> Developer
+          Software <br /> Engineer
         </h1>
         <p class="text-md md:text-2xl text-[var(--white-icon)]">
-          크로스플랫폼 모바일 개발자.
-          React Native, Flutter를 활용한 프로덕트 개발과
-          <span class="text-[var(--sec)] shiny-sec">Pretotyping</span> 기반 비즈니스 탐색에 관심이 많습니다.
+          멀티플랫폼 기반 프로덕트 개발을 중심으로 커리어를 쌓아왔으며, 현재는 풀스택 엔지니어로 활동하고 있습니다.
+          요즘은 <span class="text-[var(--sec)] shiny-sec">AI Transformation</span>과
+          <span class="text-[var(--sec)] shiny-sec">Pretotyping</span> 기반 비즈니스 탐색에 큰 관심을 두고 있습니다.
         </p>
       </div>
       <div class="flex justify-start gap-2 pt-3 md:pt-6">
@@ -215,6 +233,23 @@ const humanDesignData = {
           </svg>
         </a>
         <a
+          target="_blank"
+          href="https://www.linkedin.com/in/bogyun-kim-9805ba147"
+          aria-label="LinkedIn"
+          class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-8"
+          >
+            <path
+              d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"
+            ></path>
+          </svg>
+        </a>
+        <a
           href="mailto:k4771kim@naver.com"
           aria-label="Email"
           class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
@@ -226,12 +261,23 @@ const humanDesignData = {
       </div>
     </div>
 
-    <div class="flex flex-wrap gap-3 py-4">
-      {['React Native', 'Flutter', 'React', 'Android', 'Node.js', 'MongoDB', 'Arduino', 'TypeScript'].map(skill => (
-        <span class="px-4 py-2 text-sm rounded-full border border-[var(--white-icon-tr)] text-[var(--white-icon)] hover:text-[var(--white)] hover:border-[var(--sec)] transition-all duration-200">
-          {skill}
-        </span>
-      ))}
+    <div class="tech-marquee relative overflow-x-hidden py-8">
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--background)] to-transparent z-20"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--background)] to-transparent z-20"></div>
+
+      <div class="tech-track flex w-max items-center gap-12 md:gap-20">
+        {[...techStack, ...techStack, ...techStack].map((skill, idx) => (
+          <div
+            class="tech-chip flex items-center gap-2.5 group transition-all duration-300"
+            aria-hidden={idx >= techStack.length}
+          >
+            <img src={skill.icon} alt="" class="tech-icon" width="28" height="28" loading="lazy" />
+            <span class="text-lg font-medium text-[var(--white-icon)]">
+              {skill.name}
+            </span>
+          </div>
+        ))}
+      </div>
     </div>
 
     <div class="flex flex-col lg:flex-row items-center gap-8">
@@ -340,5 +386,48 @@ const humanDesignData = {
 
   .floating-icon-3 {
     animation: float3 6s ease-in-out infinite 0.5s;
+  }
+
+  .tech-track {
+    animation: stack-slide-left 60s linear infinite;
+  }
+
+  .tech-track:hover {
+    animation-play-state: paused;
+  }
+
+  .tech-chip {
+    white-space: nowrap;
+  }
+
+  .tech-icon {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    object-fit: contain;
+    opacity: 0.62;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .tech-chip:hover .tech-icon {
+    transform: scale(1.07);
+    opacity: 0.95;
+  }
+
+  @keyframes stack-slide-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 767px) {
+    .tech-track { animation-duration: 60s; }
+  }
+
+  @media (min-width: 768px) {
+    .tech-track { animation-duration: 50s; }
   }
 </style>
