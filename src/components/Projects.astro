@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
 const projects = await getCollection('projects');
-const sortedProjects = projects.sort((a, b) => a.data.order - b.data.order);
+const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
 const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories))];
 ---
 
@@ -12,7 +12,7 @@ const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories)
   class="py-12 border-t border-[#ffffff10] text-[var(--white)]"
 >
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My work</h2>
+    <h2 class="text-lg text-[var(--sec)] mb-2 shiny-sec">My works</h2>
     <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3>
 
     <!-- Filter -->
@@ -39,13 +39,15 @@ const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories)
           <div class="group" data-categories={project.data.categories.join(',')}>
             <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4 bg-[#1a1a1b]">
               <div class="flex items-center justify-center h-48 md:h-64 p-6">
-                <Image
-                  src={project.data.thumbnail}
-                  alt={project.data.title}
-                  width={400}
-                  height={250}
-                  class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
-                />
+                <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src={project.data.thumbnail}
+                    alt={project.data.title}
+                    width={400}
+                    height={400}
+                    class="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
             <div class="flex items-center px-3">
