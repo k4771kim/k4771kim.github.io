@@ -1,0 +1,117 @@
+---
+import LetterGlitch from "../React/LetterGlitch.tsx";
+import SkillsList from "../React/SkillsList.tsx";
+import { Image } from 'astro:assets';
+import profileImg from '../assets/profile2.png';
+---
+
+<section class="text-[var(--white)] mt-12 md:mt-0" id="home">
+  <div class="max-w-5xl mx-auto space-y-8 md:py-36 pb-14">
+    <div class="text-left space-y-4">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden ring-2 ring-[var(--sec)] ring-opacity-30 flex-shrink-0">
+          <Image src={profileImg} alt="Kim Bo Gyun" width={64} height={64} class="w-full h-full object-cover" />
+        </div>
+        <p class="text-md md:text-lg text-[var(--white-icon)] shiny-white">
+          Hi, I'm Kim Bo Gyun
+        </p>
+      </div>
+      <div
+        class="flex flex-col lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-8 md:gap-4"
+      >
+        <h1
+          class="text-[var(--white)] text-5xl md:text-6xl font-medium text-pretty leading-none"
+        >
+          Mobile <br /> Developer
+        </h1>
+        <p class="text-md md:text-2xl text-[var(--white-icon)]">
+          크로스플랫폼 모바일 개발자.
+          React Native, Flutter를 활용한 프로덕트 개발과
+          <span class="text-[var(--sec)] shiny-sec">Pretotyping</span> 기반 비즈니스 탐색에 관심이 많습니다.
+        </p>
+      </div>
+      <div class="flex justify-start gap-2 pt-3 md:pt-6">
+        <a
+          target="_blank"
+          href="https://github.com/k4771kim"
+          aria-label="GitHub"
+          class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="size-8"
+          >
+            <path
+              d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="mailto:k4771kim@naver.com"
+          aria-label="Email"
+          class="text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" class="size-8">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap gap-3 py-4">
+      {['React Native', 'Flutter', 'React', 'Android', 'Node.js', 'MongoDB', 'Arduino', 'TypeScript'].map(skill => (
+        <span class="px-4 py-2 text-sm rounded-full border border-[var(--white-icon-tr)] text-[var(--white-icon)] hover:text-[var(--white)] hover:border-[var(--sec)] transition-all duration-200">
+          {skill}
+        </span>
+      ))}
+    </div>
+
+    <div class="flex flex-col lg:flex-row items-center gap-8">
+      <SkillsList client:load />
+      <div
+        class="flex justify-center md:w-full md:h-[292px] size-[290px] pt-3 md:pt-9 md:ml-16"
+      >
+        <LetterGlitch
+          client:load
+          glitchColors={["#5e4491", "#A476FF", "#241a38"]}
+          glitchSpeed={33}
+          centerVignette={false}
+          outerVignette={true}
+          smooth={true}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  .shiny-sec {
+    background: linear-gradient(135deg, #a476ff 25%, #eee5ff 50%, #a476ff 75%);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 3s linear infinite;
+  }
+
+  .shiny-white {
+    background: linear-gradient(135deg, var(--white) 25%, #ffffff 50%, var(--white) 75%);
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 3s linear infinite;
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: 100% 50%;
+    }
+    30%,
+    70% {
+      background-position: 0% 50%;
+    }
+  }
+</style>

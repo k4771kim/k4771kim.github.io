@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  description: string;
+  thumbnail: ImageMetadata;
+  categories: string[];
+  links: Array<{ label: string; url: string }>;
+  index: number;
+}
+
+const { title, description, thumbnail, categories, links, index } = Astro.props;
+---
+<div
+  class="group"
+  data-categories={categories.join(',')}
+>
+  <a class="block cursor-pointer">
+    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4 bg-[var(--component-bg)] border border-[var(--white-icon-tr)]">
+      <div class="flex items-center justify-center h-48 md:h-64 p-8 bg-[#1a1a1b]">
+        <Image
+          src={thumbnail}
+          alt={title}
+          width={600}
+          height={340}
+          class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300"
+        />
+      </div>
+    </div>
+    <div class="flex items-center px-3">
+      <div class="flex-grow">
+        <h4 class="text-2xl font-semibold text-[var(--white)]">{title}</h4>
+        <span class="py-1 text-sm text-[var(--white-icon)]">
+          {categories.join(' / ')}
+        </span>
+      </div>
+      <div class="flex gap-2 ml-auto">
+        {links && links.length > 0 && links.slice(0, 1).map(link => (
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={link.label}
+            class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+            onclick="event.stopPropagation();"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7">
+              <path d="M24 12L18.3431 17.6569L16.9289 16.2426L21.1716 12L16.9289 7.75736L18.3431 6.34315L24 12ZM2.82843 12L7.07107 16.2426L5.65685 17.6569L0 12L5.65685 6.34315L7.07107 7.75736L2.82843 12ZM9.78845 21H7.66009L14.2116 3H16.3399L9.78845 21Z" />
+            </svg>
+          </a>
+        ))}
+        <button
+          class="detail-btn size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
+          data-modal-target={`modal-${index}`}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7">
+            <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </a>
+</div>

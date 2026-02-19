@@ -1,0 +1,19 @@
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# claude/omc
+.claude/
+.omc/
+
+# environment
+.env
+.env.*
+
+# OS
+.DS_Store

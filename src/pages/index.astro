@@ -1,0 +1,106 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Home from '../components/Home.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import ProjectModal from '../components/ProjectModal.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+const sortedProjects = projects.sort((a, b) => a.data.order - b.data.order);
+---
+
+<Layout>
+  <Nav />
+  <Home />
+  <Projects />
+  <Contact />
+  <Footer />
+
+  <!-- Modals -->
+  {sortedProjects.map((project, i) => (
+    <ProjectModal
+      id={`modal-${i}`}
+      title={project.data.title}
+      description={project.data.description}
+      detailImage={project.data.detailImage}
+      youtubeUrl={project.data.youtubeUrl}
+      role={project.data.role}
+      links={project.data.links || []}
+    />
+  ))}
+
+  <!-- Scripts -->
+  <script>
+    // Filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll<HTMLElement>('#project-grid > div');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = (btn as HTMLElement).dataset.filter;
+
+        filterBtns.forEach(b => {
+          (b as HTMLElement).style.backgroundColor = '';
+          (b as HTMLElement).style.color = '';
+          (b as HTMLElement).style.borderColor = '';
+          b.classList.remove('bg-[var(--sec)]', 'text-white', 'border-[var(--sec)]');
+          b.classList.add('border-[var(--white-icon-tr)]', 'text-[var(--white-icon)]');
+        });
+        (btn as HTMLElement).style.backgroundColor = 'var(--sec)';
+        (btn as HTMLElement).style.color = 'white';
+        (btn as HTMLElement).style.borderColor = 'var(--sec)';
+
+        cards.forEach(card => {
+          const cats = card.dataset.categories?.split(',') || [];
+          const show = filter === 'all' || cats.includes(filter || '');
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    // Modal open via detail buttons
+    document.querySelectorAll('.detail-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const target = (btn as HTMLElement).dataset.modalTarget;
+        if (target) {
+          const modal = document.getElementById(target);
+          if (modal) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+          }
+        }
+      });
+    });
+
+    // Modal close
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+      });
+      modal.querySelector('.modal-close')?.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(modal => {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        });
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
+</Layout>
