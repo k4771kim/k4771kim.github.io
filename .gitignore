@@ -15,5 +15,8 @@ node_modules/
 .env
 .env.*
 
+# npm
+.npmrc
+
 # OS
 .DS_Store
