@@ -8,7 +8,11 @@ interface BodyGraphWrapperProps {
 
 export default function BodyGraphWrapper({ data }: BodyGraphWrapperProps) {
   return (
-    <Canvas camera={{ position: [3, 3, 3], fov: 45 }}>
+    <Canvas
+      style={{ width: "100%", height: "100%" }}
+      dpr={[1, 1.5]}
+      camera={{ position: [3, 3, 3], fov: 45 }}
+    >
       <Suspense fallback={null}>
         <BodyGraphScene data={data} />
       </Suspense>

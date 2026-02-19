@@ -167,7 +167,7 @@ const humanDesignData = {
 };
 ---
 
-<section class="text-[var(--white)] mt-12 md:mt-0 relative min-h-screen flex items-center overflow-hidden" id="home">
+<section class="text-[var(--white)] mt-12 md:mt-0 relative min-h-screen flex items-center overflow-x-hidden overflow-y-visible" id="home">
   <!-- Background Effects -->
   <div class="absolute top-1/4 -left-20 w-96 h-96 bg-[#5b13ec]/20 rounded-full blur-[120px] pointer-events-none" />
   <div class="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-[#5b13ec]/10 rounded-full blur-[150px] pointer-events-none" />
@@ -237,9 +237,9 @@ const humanDesignData = {
     <div class="flex flex-col lg:flex-row items-center gap-8">
       <SkillsList client:load />
       <div
-        class="relative flex justify-center md:w-full md:h-[260px] size-[260px] pt-3 md:pt-9 md:ml-16"
+        class="relative flex justify-center w-full pt-3 md:pt-9 lg:ml-16"
       >
-        <div class="relative w-full aspect-square max-w-md flex justify-center items-center">
+        <div class="relative aspect-square w-[min(78vw,320px)] md:w-[min(60vw,360px)] flex justify-center items-center">
           <div class="absolute inset-0 bg-[#5b13ec]/20 rounded-full blur-[100px] animate-pulse"></div>
           <div class="relative w-full h-full bg-white/[0.03] backdrop-blur-xl rounded-full flex justify-center items-center border border-[#5b13ec]/20 overflow-hidden shadow-[0_0_30px_rgba(91,19,236,0.1)]">
             <div class="absolute inset-0 w-full h-full">
