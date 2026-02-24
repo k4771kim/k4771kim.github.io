@@ -1,0 +1,355 @@
+{
+  "title": "김보균 | Developer",
+  "headings": [
+    {
+      "tag": "H1",
+      "text": "Mobile  Developer"
+    },
+    {
+      "tag": "H3",
+      "text": "What I do?"
+    },
+    {
+      "tag": "H2",
+      "text": "My works"
+    },
+    {
+      "tag": "H3",
+      "text": "Projects"
+    },
+    {
+      "tag": "H2",
+      "text": "Let's talk"
+    },
+    {
+      "tag": "H3",
+      "text": "Contact"
+    },
+    {
+      "tag": "H2",
+      "text": "HDHub"
+    },
+    {
+      "tag": "H2",
+      "text": "Allatte"
+    },
+    {
+      "tag": "H2",
+      "text": "Boolio"
+    },
+    {
+      "tag": "H2",
+      "text": "Market Village"
+    },
+    {
+      "tag": "H2",
+      "text": "Elice Mobile"
+    },
+    {
+      "tag": "H2",
+      "text": "Madlen"
+    },
+    {
+      "tag": "H2",
+      "text": "Andante"
+    },
+    {
+      "tag": "H2",
+      "text": "LooKar"
+    },
+    {
+      "tag": "H2",
+      "text": "레시피디아"
+    },
+    {
+      "tag": "H2",
+      "text": "arDRUMoid"
+    },
+    {
+      "tag": "H2",
+      "text": "천 개의 목소리"
+    },
+    {
+      "tag": "H2",
+      "text": "포룸 인테리어"
+    }
+  ],
+  "links": [
+    {
+      "text": "Home Home",
+      "href": "#home",
+      "aria": ""
+    },
+    {
+      "text": "Projects Projects",
+      "href": "#projects",
+      "aria": ""
+    },
+    {
+      "text": "Contact Contact",
+      "href": "#contact",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "href": "https://github.com/k4771kim",
+      "aria": "GitHub"
+    },
+    {
+      "text": "",
+      "href": "mailto:k4771kim@naver.com",
+      "aria": "Email"
+    },
+    {
+      "text": "",
+      "href": "https://hdhub.app",
+      "aria": "Web"
+    },
+    {
+      "text": "",
+      "href": "https://allatte.com",
+      "aria": "Web"
+    },
+    {
+      "text": "",
+      "href": "https://play.google.com/store/apps/details?id=com.elicemobile",
+      "aria": "Android"
+    },
+    {
+      "text": "",
+      "href": "https://github.com/k4771kim/RecipediaBackend",
+      "aria": "Backend"
+    },
+    {
+      "text": "",
+      "href": "https://github.com/k4771kim/Ardrumoid",
+      "aria": "GitHub"
+    },
+    {
+      "text": "",
+      "href": "https://github.com/k4771kim/VoiceOfThousands",
+      "aria": "Android"
+    },
+    {
+      "text": "",
+      "href": "https://github.com/k4771kim/FoRoomBackend",
+      "aria": "Backend"
+    },
+    {
+      "text": "More projects on",
+      "href": "https://github.com/k4771kim?tab=repositories",
+      "aria": "GitHub"
+    },
+    {
+      "text": "k4771kim@naver.com",
+      "href": "mailto:k4771kim@naver.com",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "href": "https://github.com/k4771kim",
+      "aria": "GitHub"
+    },
+    {
+      "text": "",
+      "href": "mailto:k4771kim@naver.com",
+      "aria": "Email"
+    },
+    {
+      "text": "Web",
+      "href": "https://hdhub.app",
+      "aria": ""
+    },
+    {
+      "text": "Web",
+      "href": "https://allatte.com",
+      "aria": ""
+    },
+    {
+      "text": "Android",
+      "href": "https://play.google.com/store/apps/details?id=com.elicemobile",
+      "aria": ""
+    },
+    {
+      "text": "iOS",
+      "href": "https://itunes.apple.com/kr/app/엘리스-elice-코딩-교실/id1385442544?mt=8",
+      "aria": ""
+    },
+    {
+      "text": "Backend",
+      "href": "https://github.com/k4771kim/RecipediaBackend",
+      "aria": ""
+    },
+    {
+      "text": "Android",
+      "href": "https://github.com/k4771kim/RecipediaAndroid",
+      "aria": ""
+    },
+    {
+      "text": "Google Play",
+      "href": "https://play.google.com/store/apps/details?id=seop.gyun.recipedia&hl=ko",
+      "aria": ""
+    },
+    {
+      "text": "GitHub",
+      "href": "https://github.com/k4771kim/Ardrumoid",
+      "aria": ""
+    },
+    {
+      "text": "Android",
+      "href": "https://github.com/k4771kim/VoiceOfThousands",
+      "aria": ""
+    },
+    {
+      "text": "Google Play",
+      "href": "https://play.google.com/store/apps/details?id=gyun.bo.voice_of_thousands_1&hl=ko",
+      "aria": ""
+    },
+    {
+      "text": "Backend",
+      "href": "https://github.com/k4771kim/FoRoomBackend",
+      "aria": ""
+    },
+    {
+      "text": "Android",
+      "href": "https://github.com/k4771kim/FoRoomAndroid",
+      "aria": ""
+    },
+    {
+      "text": "Google Play",
+      "href": "https://play.google.com/store/apps/details?id=com.forroom.suhyemin.kimbogyun.songmin&hl=ko",
+      "aria": ""
+    }
+  ],
+  "buttons": [
+    {
+      "text": "All",
+      "aria": ""
+    },
+    {
+      "text": "React",
+      "aria": ""
+    },
+    {
+      "text": "Flutter",
+      "aria": ""
+    },
+    {
+      "text": "ReactNative",
+      "aria": ""
+    },
+    {
+      "text": "Ionic2",
+      "aria": ""
+    },
+    {
+      "text": "Android",
+      "aria": ""
+    },
+    {
+      "text": "Arduino",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": ""
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    },
+    {
+      "text": "",
+      "aria": "Close"
+    }
+  ],
+  "sectionIds": [
+    "home",
+    "projects",
+    "contact"
+  ]
+}

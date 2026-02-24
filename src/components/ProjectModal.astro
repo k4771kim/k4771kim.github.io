@@ -6,12 +6,13 @@ interface Props {
   title: string;
   description: string;
   detailImage?: ImageMetadata;
+  galleryImages?: ImageMetadata[];
   youtubeUrl?: string;
   role: string;
   links: Array<{ label: string; url: string }>;
 }
 
-const { id, title, description, detailImage, youtubeUrl, role, links } = Astro.props;
+const { id, title, description, detailImage, galleryImages = [], youtubeUrl, role, links } = Astro.props;
 ---
 <div
   id={id}
@@ -34,11 +35,23 @@ const { id, title, description, detailImage, youtubeUrl, role, links } = Astro.p
 
     <div class="p-6">
       <h2 class="text-2xl font-bold text-[var(--white)] mb-2">{title}</h2>
-      <p class="text-[var(--white-icon)] mb-4">{description}</p>
+      <p class="text-[var(--white-icon)] mb-4 whitespace-pre-line leading-relaxed">{description}</p>
       <div class="mb-4">
         <span class="text-sm font-medium text-[var(--sec)]">Role</span>
         <p class="text-sm text-[var(--white)] mt-1">{role}</p>
       </div>
+      {galleryImages.length > 0 && (
+        <div class="mb-4">
+          <span class="text-sm font-medium text-[var(--sec)]">Screenshots</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
+            {galleryImages.map((image, index) => (
+              <div class="rounded-xl overflow-hidden bg-[var(--background)] border border-[var(--white-icon-tr)]">
+                <Image src={image} alt={`${title} screenshot ${index + 1}`} width={480} height={270} class="w-full h-auto object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
       {links && links.length > 0 && (
         <div class="flex flex-wrap gap-2">
           {links.map(link => (

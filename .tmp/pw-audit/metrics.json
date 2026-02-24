@@ -1,0 +1,539 @@
+[
+  {
+    "name": "mobile",
+    "viewport": {
+      "vw": 390,
+      "vh": 844
+    },
+    "overflow": {
+      "maxRight": 434,
+      "minLeft": -66,
+      "overflowCount": 2
+    },
+    "counts": {
+      "sections": 3,
+      "h1": 1,
+      "h2": 14,
+      "h3": 3,
+      "links": 29,
+      "buttons": 31
+    },
+    "sampleStyles": {
+      "h1": {
+        "fontSize": "48px",
+        "lineHeight": "48px",
+        "color": "rgb(223, 223, 223)"
+      },
+      "p": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "color": "rgba(0, 0, 0, 0)"
+      },
+      "navLink": {
+        "fontSize": "12px",
+        "lineHeight": "16px",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    "smallTargets": [
+      {
+        "tag": "BUTTON",
+        "text": "All",
+        "aria": "",
+        "w": 52,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "React",
+        "aria": "",
+        "w": 74,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Flutter",
+        "aria": "",
+        "w": 81,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ReactNative",
+        "aria": "",
+        "w": 119,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ionic2",
+        "aria": "",
+        "w": 76,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Android",
+        "aria": "",
+        "w": 91,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Arduino",
+        "aria": "",
+        "w": 90,
+        "h": 38
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "GitHub",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "Email",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "iOS",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      }
+    ]
+  },
+  {
+    "name": "tablet",
+    "viewport": {
+      "vw": 768,
+      "vh": 1024
+    },
+    "overflow": {
+      "maxRight": 736,
+      "minLeft": 0,
+      "overflowCount": 0
+    },
+    "counts": {
+      "sections": 3,
+      "h1": 1,
+      "h2": 14,
+      "h3": 3,
+      "links": 29,
+      "buttons": 31
+    },
+    "sampleStyles": {
+      "h1": {
+        "fontSize": "60px",
+        "lineHeight": "60px",
+        "color": "rgb(223, 223, 223)"
+      },
+      "p": {
+        "fontSize": "18px",
+        "lineHeight": "28px",
+        "color": "rgba(0, 0, 0, 0)"
+      },
+      "navLink": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    "smallTargets": [
+      {
+        "tag": "A",
+        "text": "Home Home",
+        "aria": "",
+        "w": 50,
+        "h": 24
+      },
+      {
+        "tag": "A",
+        "text": "Projects Projects",
+        "aria": "",
+        "w": 65,
+        "h": 24
+      },
+      {
+        "tag": "A",
+        "text": "Contact Contact",
+        "aria": "",
+        "w": 63,
+        "h": 24
+      },
+      {
+        "tag": "BUTTON",
+        "text": "All",
+        "aria": "",
+        "w": 52,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "React",
+        "aria": "",
+        "w": 74,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Flutter",
+        "aria": "",
+        "w": 81,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ReactNative",
+        "aria": "",
+        "w": 119,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ionic2",
+        "aria": "",
+        "w": 76,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Android",
+        "aria": "",
+        "w": 91,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Arduino",
+        "aria": "",
+        "w": 90,
+        "h": 38
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "GitHub",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "Email",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      }
+    ]
+  },
+  {
+    "name": "desktop",
+    "viewport": {
+      "vw": 1280,
+      "vh": 900
+    },
+    "overflow": {
+      "maxRight": 1280,
+      "minLeft": 0,
+      "overflowCount": 0
+    },
+    "counts": {
+      "sections": 3,
+      "h1": 1,
+      "h2": 14,
+      "h3": 3,
+      "links": 29,
+      "buttons": 31
+    },
+    "sampleStyles": {
+      "h1": {
+        "fontSize": "60px",
+        "lineHeight": "60px",
+        "color": "rgb(223, 223, 223)"
+      },
+      "p": {
+        "fontSize": "18px",
+        "lineHeight": "28px",
+        "color": "rgba(0, 0, 0, 0)"
+      },
+      "navLink": {
+        "fontSize": "16px",
+        "lineHeight": "24px",
+        "color": "rgb(255, 255, 255)"
+      }
+    },
+    "smallTargets": [
+      {
+        "tag": "A",
+        "text": "Home Home",
+        "aria": "",
+        "w": 50,
+        "h": 24
+      },
+      {
+        "tag": "A",
+        "text": "Projects Projects",
+        "aria": "",
+        "w": 65,
+        "h": 24
+      },
+      {
+        "tag": "A",
+        "text": "Contact Contact",
+        "aria": "",
+        "w": 63,
+        "h": 24
+      },
+      {
+        "tag": "BUTTON",
+        "text": "All",
+        "aria": "",
+        "w": 52,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "React",
+        "aria": "",
+        "w": 74,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Flutter",
+        "aria": "",
+        "w": 81,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "ReactNative",
+        "aria": "",
+        "w": 119,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Ionic2",
+        "aria": "",
+        "w": 76,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Android",
+        "aria": "",
+        "w": 91,
+        "h": 38
+      },
+      {
+        "tag": "BUTTON",
+        "text": "Arduino",
+        "aria": "",
+        "w": 90,
+        "h": 38
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "GitHub",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "Email",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      }
+    ]
+  }
+]

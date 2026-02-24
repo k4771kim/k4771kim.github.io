@@ -1,0 +1,467 @@
+[
+  {
+    "name": "mobile",
+    "overflow": {
+      "maxRight": 390,
+      "minLeft": 0,
+      "overflowCount": 0
+    },
+    "smallTargets": [
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "GitHub",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "Email",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "iOS",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Backend",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Google Play",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "GitHub",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "sections": [
+      "home",
+      "projects",
+      "contact"
+    ]
+  },
+  {
+    "name": "tablet",
+    "overflow": {
+      "maxRight": 736,
+      "minLeft": 0,
+      "overflowCount": 0
+    },
+    "smallTargets": [
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "GitHub",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "Email",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "iOS",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Backend",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Google Play",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "GitHub",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "sections": [
+      "home",
+      "projects",
+      "contact"
+    ]
+  },
+  {
+    "name": "desktop",
+    "overflow": {
+      "maxRight": 1280,
+      "minLeft": 0,
+      "overflowCount": 0
+    },
+    "smallTargets": [
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "GitHub",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "aria": "Email",
+        "w": 32,
+        "h": 32
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Web",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "iOS",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Backend",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Android",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "Google Play",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "BUTTON",
+        "text": "",
+        "aria": "Close",
+        "w": 0,
+        "h": 0
+      },
+      {
+        "tag": "A",
+        "text": "GitHub",
+        "aria": "",
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "sections": [
+      "home",
+      "projects",
+      "contact"
+    ]
+  }
+]

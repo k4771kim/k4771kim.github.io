@@ -8,6 +8,7 @@ const projects = defineCollection({
     description: z.string(),
     thumbnail: image(),
     detailImage: image().optional(),
+    galleryImages: z.array(image()).optional(),
     youtubeUrl: z.string().optional(),
     categories: z.array(z.string()),
     role: z.string(),
