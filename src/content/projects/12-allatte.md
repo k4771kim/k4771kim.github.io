@@ -10,7 +10,7 @@ links:
   - label: "Web"
     url: "https://allatte.com"
 year: 2022
-order: 12
+order: 900
 ---
 
 전세계 주식 백테스팅이 가능한 퀀트 투자 분석 툴.
