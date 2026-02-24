@@ -14,7 +14,7 @@ description: |
 
   4) 결과
   사내 AI Agent Playground와 문서/데이터 파이프라인 기반 Agent 매니지먼트 시스템을 구축했고, 팀 Agent 개발/공유 이벤트 운영으로 조직의 AI 활용 이해도를 높였습니다.
-thumbnail: "../../assets/portfolio/linchpin.svg
+thumbnail: "../../assets/portfolio/linchpin.svg"
 detailImage: "../../assets/portfolio/linchpin-2.png"
 galleryImages:
   - "../../assets/portfolio/linchpin-1.png"
