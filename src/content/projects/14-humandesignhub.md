@@ -8,7 +8,7 @@ categories:
 role: "Full Stack Developer (React, Side Project)"
 links:
   - label: "Web"
-    url: "https://hdhub.app"
+    url: "https://humandesignhub.app"
 year: 2025
 order: 700
 ---

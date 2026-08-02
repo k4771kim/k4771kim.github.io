@@ -11,7 +11,7 @@ const CategoryIcons: Record<string, React.ReactNode> = {
       <path d="M21 3C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H21ZM20 11H4V19H20V11ZM20 5H4V9H20V5ZM11 6V8H9V6H11ZM7 6V8H5V6H7Z"></path>
     </svg>
   ),
-  "IoT & Hardware": (
+  "AI Agent Engineering": (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 text-[var(--sec)] opacity-70">
       <path d="M2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zM4 5v14h16V5H4zm2 2h4v4H6V7zm0 6h4v4H6v-4zm6-6h6v4h-6V7zm0 6h6v4h-6v-4z"></path>
     </svg>
@@ -32,9 +32,10 @@ const SkillsList = () => {
       "TypeScript 기반 프로젝트",
       "Node.js 백엔드",
     ],
-    "IoT & Hardware": [
-      "Arduino 기반 하드웨어 프로젝트",
-      "IoT 디바이스 연동",
+    "AI Agent Engineering": [
+      "LangChain / LangGraph 기반 Agent 워크플로 설계",
+      "문서·DB 연동 RAG 및 데이터 파이프라인 구축",
+      "Kubernetes 기반 Agent 플랫폼 배포·운영",
     ],
   };
 
