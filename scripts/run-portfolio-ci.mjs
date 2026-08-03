@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
+import { createServer } from 'node:net';
 import process from 'node:process';
 import { setTimeout as delay } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
@@ -10,6 +11,31 @@ const DEFAULT_STOP_TIMEOUT_MS = 2_000;
 
 function isRunning(child) {
   return child.exitCode === null && child.signalCode === null;
+}
+
+async function assertPortAvailable(url) {
+  const target = new URL(url);
+  const host = target.hostname;
+  const port = Number(target.port || (target.protocol === 'https:' ? 443 : 80));
+  const probe = createServer();
+
+  try {
+    await new Promise((resolve, reject) => {
+      probe.once('error', reject);
+      probe.listen({ host, port, exclusive: true }, resolve);
+    });
+  } catch (error) {
+    if (error.code === 'EADDRINUSE') {
+      throw new Error(`Preview port is already in use: ${host}:${port}`, { cause: error });
+    }
+    throw error;
+  } finally {
+    if (probe.listening) {
+      await new Promise((resolve, reject) => {
+        probe.close((error) => error ? reject(error) : resolve());
+      });
+    }
+  }
 }
 
 function signalProcessTree(child, signal) {
@@ -88,6 +114,8 @@ export async function runPreviewVerification({
   readyIntervalMs = DEFAULT_READY_INTERVAL_MS,
   stopTimeoutMs = DEFAULT_STOP_TIMEOUT_MS,
 }) {
+  await assertPortAvailable(url);
+
   const [previewExecutable, ...previewArgs] = previewCommand;
   const preview = spawn(previewExecutable, previewArgs, {
     cwd,
@@ -136,7 +164,17 @@ async function main() {
   const npmExecutable = process.platform === 'win32' ? 'npm.cmd' : 'npm';
   const verificationScript = fileURLToPath(new URL('./verify-portfolio.mjs', import.meta.url));
   const result = await runPreviewVerification({
-    previewCommand: [npmExecutable, 'run', 'preview', '--', '--host', host, '--port', port],
+    previewCommand: [
+      npmExecutable,
+      'run',
+      'preview',
+      '--',
+      '--host',
+      host,
+      '--port',
+      port,
+      '--strictPort',
+    ],
     verificationCommand: [process.execPath, verificationScript],
     url,
   });

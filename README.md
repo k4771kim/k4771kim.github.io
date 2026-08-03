@@ -5,7 +5,7 @@ six selected projects and is deployed as a static GitHub Pages artifact.
 
 ## Local development
 
-Use Node `24.18.1` (the version pinned in `.nvmrc` and CI).
+Use Node `24.18.1` (the version pinned in `.node-version` and CI).
 
 ```sh
 npm ci

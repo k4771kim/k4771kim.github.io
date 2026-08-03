@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createServer as createHttpServer } from 'node:http';
 import { createServer } from 'node:net';
 import { readFile } from 'node:fs/promises';
 import test from 'node:test';
@@ -87,6 +88,39 @@ test('times out readiness and terminates the preview process', async () => {
       return true;
     },
   );
+});
+
+test('rejects a pre-bound preview port without accepting or stopping its owner', async () => {
+  const foreignServer = createHttpServer((_, response) => {
+    response.writeHead(200, { 'content-type': 'text/plain', connection: 'close' });
+    response.end('foreign');
+  });
+  foreignServer.listen(0, '127.0.0.1');
+  await onceListening(foreignServer);
+  const address = foreignServer.address();
+  const url = `http://127.0.0.1:${address.port}`;
+
+  try {
+    await assert.rejects(
+      runPreviewVerification({
+        previewCommand: [process.execPath, '-e', healthyServer, String(address.port)],
+        verificationCommand: [process.execPath, '-e', 'process.exit(0)'],
+        url,
+        stdio: 'ignore',
+        readyTimeoutMs: 500,
+        readyIntervalMs: 20,
+        stopTimeoutMs: 100,
+      }),
+      /Preview port is already in use/,
+    );
+
+    const response = await fetch(url);
+    assert.equal(await response.text(), 'foreign');
+  } finally {
+    await new Promise((resolve, reject) => {
+      foreignServer.close((error) => error ? reject(error) : resolve());
+    });
+  }
 });
 
 test('escalates from TERM to KILL for an uncooperative preview', async () => {
