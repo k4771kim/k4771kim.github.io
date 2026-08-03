@@ -11,9 +11,10 @@
     "test:runner": "node --test scripts/run-portfolio-ci.test.mjs",
     "build": "astro build",
     "preview": "astro preview",
+    "verify:bodygraph": "node scripts/verify-bodygraph-build.mjs",
     "verify:portfolio": "node scripts/verify-portfolio.mjs",
     "verify:ci": "node scripts/run-portfolio-ci.mjs",
-    "quality": "npm run check && npm run test:runner && npm run build && npm run verify:ci",
+    "quality": "npm run check && npm run test:runner && npm run build && npm run verify:bodygraph && npm run verify:ci",
     "astro": "astro"
   },
   "dependencies": {
