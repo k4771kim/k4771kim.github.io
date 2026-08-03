@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "verify:portfolio": "node scripts/verify-portfolio.mjs",
     "astro": "astro"
   },
   "dependencies": {

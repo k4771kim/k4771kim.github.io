@@ -3,7 +3,8 @@ title: "Elice Mobile"
 description: "Elice Mobile"
 thumbnail: "../../assets/portfolio/elice.png"
 detailImage: "../../assets/portfolio/elice_view.png"
-categories: ["ReactNative", "Flutter"]
+areas: ["Mobile"]
+technologies: ["React Native", "Flutter"]
 role: "React Native, Flutter(Android, IOS)"
 links:
   - label: "Android"

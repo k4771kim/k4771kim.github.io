@@ -1,23 +1,67 @@
 ---
 import '@fontsource-variable/montserrat';
 import '../styles/global.css';
+import profileImg from '../assets/profile2.png';
 
 interface Props {
   title?: string;
 }
 
-const { title = '김보균 | Developer' } = Astro.props;
+const { title = '김보균 (Bogyun Kim) | AI Agent & Full-Stack Engineer' } = Astro.props;
+const description = 'LangChain·LangGraph와 Kubernetes로 AI Agent 플랫폼을 설계·운영하고, 모바일부터 웹까지 제품을 구축해 온 소프트웨어 엔지니어 김보균의 포트폴리오입니다.';
+const siteUrl = Astro.site ?? new URL('https://k4771kim.github.io');
+const canonicalUrl = new URL(Astro.url.pathname, siteUrl).toString();
+const socialImageUrl = new URL(profileImg.src, siteUrl).toString();
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  url: canonicalUrl,
+  name: title,
+  description,
+  mainEntity: {
+    '@type': 'Person',
+    name: '김보균',
+    alternateName: 'Bogyun Kim',
+    jobTitle: 'AI Agent & Full-Stack Engineer',
+    url: canonicalUrl,
+    image: socialImageUrl,
+    sameAs: [
+      'https://github.com/k4771kim',
+      'https://www.linkedin.com/in/bogyun-kim-9805ba147',
+    ],
+    knowsAbout: [
+      'AI Agent Engineering',
+      'LangChain',
+      'LangGraph',
+      'Retrieval-Augmented Generation',
+      'Kubernetes',
+      'Full-Stack Development',
+    ],
+  },
+};
 ---
 
 <!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="김보균 - Mobile Developer Portfolio" />
+    <meta name="description" content={description} />
+    <meta name="author" content="김보균 (Bogyun Kim)" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="김보균 - Mobile Developer Portfolio" />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content="Bogyun Kim profile" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <title>{title}</title>
   </head>
   <body class="bg-[--background] sm:px-28 lg:px-20 px-9">

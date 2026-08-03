@@ -49,15 +49,17 @@ const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
           (b as HTMLElement).style.borderColor = '';
           b.classList.remove('bg-[var(--sec)]', 'text-white', 'border-[var(--sec)]');
           b.classList.add('border-[var(--white-icon-tr)]', 'text-[var(--white-icon)]');
+          b.setAttribute('aria-pressed', 'false');
         });
         (btn as HTMLElement).style.backgroundColor = 'var(--sec)';
         (btn as HTMLElement).style.color = 'white';
         (btn as HTMLElement).style.borderColor = 'var(--sec)';
+        btn.setAttribute('aria-pressed', 'true');
 
         cards.forEach(card => {
-          const cats = card.dataset.categories?.split(',') || [];
-          const show = filter === 'all' || cats.includes(filter || '');
-          card.style.display = show ? '' : 'none';
+          const areas = card.dataset.areas?.split(',') || [];
+          const show = filter === 'all' || areas.includes(filter || '');
+          card.hidden = !show;
         });
       });
     });

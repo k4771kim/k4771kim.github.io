@@ -10,7 +10,8 @@ const projects = defineCollection({
     detailImage: image().optional(),
     galleryImages: z.array(image()).optional(),
     youtubeUrl: z.string().optional(),
-    categories: z.array(z.string()),
+    areas: z.array(z.enum(["AI Agent", "Web", "Mobile"])).min(1),
+    technologies: z.array(z.string()).min(1),
     role: z.string(),
     links: z.array(z.object({
       label: z.string(),

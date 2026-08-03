@@ -20,12 +20,13 @@ galleryImages:
   - "../../assets/portfolio/linchpin-1.png"
   - "../../assets/portfolio/linchpin-3.png"
   - "../../assets/portfolio/linchpin-architecture.png"
-categories:
-  - LangChain
-  - LangGraph
+areas: ["AI Agent"]
+technologies:
+  - LangChain · LangGraph
   - Kotlin Spring
   - Redis
   - PostgreSQL
+  - Kubernetes
 role: "사내 AI Agent 플레이그라운드 개발 리드"
 links: []
 year: 2026

@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 
 const projects = await getCollection('projects');
 const sortedProjects = projects.sort((a, b) => b.data.order - a.data.order);
-const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories))];
+const filterAreas = ['AI Agent', 'Web', 'Mobile'] as const;
 ---
 
 <section
@@ -16,19 +16,23 @@ const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories)
     <h3 class="text-4xl md:text-5xl font-medium mb-8">Projects</h3>
 
     <!-- Filter -->
-    <div class="flex flex-wrap gap-2 mb-10">
+    <div class="flex flex-wrap gap-2 mb-10" role="group" aria-label="프로젝트 영역 필터">
       <button
-        class="filter-btn px-4 py-2 text-sm rounded-full border border-[var(--sec)] bg-[var(--sec)] text-white transition-all duration-200"
+        type="button"
+        class="filter-btn px-3 sm:px-4 py-2 text-sm rounded-full border border-[var(--sec)] bg-[var(--sec)] text-white transition-all duration-200"
         data-filter="all"
+        aria-pressed="true"
       >
         All
       </button>
-      {allCategories.map(cat => (
+      {filterAreas.map(area => (
         <button
-          class="filter-btn px-4 py-2 text-sm rounded-full border border-[var(--white-icon-tr)] text-[var(--white-icon)] hover:border-[var(--sec)] hover:text-[var(--white)] transition-all duration-200"
-          data-filter={cat}
+          type="button"
+          class="filter-btn px-3 sm:px-4 py-2 text-sm rounded-full border border-[var(--white-icon-tr)] text-[var(--white-icon)] hover:border-[var(--sec)] hover:text-[var(--white)] transition-all duration-200"
+          data-filter={area}
+          aria-pressed="false"
         >
-          {cat}
+          {area}
         </button>
       ))}
     </div>
@@ -36,7 +40,7 @@ const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories)
     <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
         sortedProjects.map((project, i) => (
-          <div class="group" data-categories={project.data.categories.join(',')}>
+          <div class="group" data-areas={project.data.areas.join(',')}>
             <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 mb-4 bg-[#1a1a1b]">
               <div class="flex items-center justify-center h-48 md:h-64 p-6">
                 <div class="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden bg-white flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
@@ -50,19 +54,30 @@ const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories)
                 </div>
               </div>
             </div>
-            <div class="flex items-center px-3">
-              <div class="flex-grow">
-                <h4 class="text-2xl font-semibold">{project.data.title}</h4>
-                <span class="py-1 text-sm text-[var(--white-icon)]">
-                  {project.data.categories.join(' / ')}
-                </span>
+            <div class="flex items-start gap-4 px-3">
+              <div class="flex-grow min-w-0">
+                <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <h4 class="text-2xl font-semibold">{project.data.title}</h4>
+                  <span class="text-sm text-[var(--sec)]">{project.data.year}</span>
+                </div>
+                <p class="mt-1 text-sm leading-relaxed text-[var(--white-icon)]">
+                  {project.data.role}
+                </p>
+                <div class="flex flex-wrap gap-1.5 mt-3" aria-label={`${project.data.title} 기술 스택`}>
+                  {project.data.technologies.map(technology => (
+                    <span class="px-2.5 py-1 text-xs rounded-full border border-[var(--white-icon-tr)] bg-[var(--component-bg)] text-[var(--white-icon)]">
+                      {technology}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <div class="flex gap-2 ml-auto">
+              <div class="flex gap-2 ml-auto flex-shrink-0">
                 {project.data.links && project.data.links.length > 0 && (
                   <a
                     target="_blank"
+                    rel="noopener noreferrer"
                     href={project.data.links[0].url}
-                    aria-label={project.data.links[0].label}
+                    aria-label={`${project.data.title} ${project.data.links[0].label}`}
                     class="size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7">
@@ -71,8 +86,10 @@ const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories)
                   </a>
                 )}
                 <button
+                  type="button"
                   class="detail-btn size-14 flex justify-center items-center text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-1 border-[var(--white-icon-tr)] p-3 rounded-xl bg-[#1414149c] hover:bg-[var(--white-icon-tr)]"
                   data-modal-target={`modal-${i}`}
+                  aria-label={`${project.data.title} 상세 보기`}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-7">
                     <path d="M16.0037 9.41421L7.39712 18.0208L5.98291 16.6066L14.5895 8H7.00373V6H18.0037V17H16.0037V9.41421Z" />
@@ -86,6 +103,7 @@ const allCategories = [...new Set(sortedProjects.flatMap(p => p.data.categories)
     </div>
     <a
       target="_blank"
+      rel="noopener noreferrer"
       href="https://github.com/k4771kim?tab=repositories"
       aria-label="GitHub"
       class="w-full flex items-center justify-center gap-2 mt-9 text-[var(--white-icon)] hover:text-white transition duration-300 ease-in-out border border-[var(--white-icon-tr)] p-3 rounded-full bg-[#1414149c] hover:bg-[var(--white-icon-tr)] hover:scale-105"
