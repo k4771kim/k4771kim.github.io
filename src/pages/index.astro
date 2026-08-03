@@ -7,6 +7,7 @@ import Contact from '../components/Contact.astro';
 import Footer from '../components/Footer.astro';
 import ProjectModal from '../components/ProjectModal.astro';
 import { getCollection } from 'astro:content';
+import projectDialogsUrl from '../scripts/project-dialogs.js?url&no-inline';
 
 const projects = await getCollection('projects');
 const featuredProjects = projects
@@ -66,46 +67,7 @@ const featuredProjects = projects
       });
     });
 
-    // Modal open via detail buttons
-    document.querySelectorAll('.detail-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const target = (btn as HTMLElement).dataset.modalTarget;
-        if (target) {
-          const modal = document.getElementById(target);
-          if (modal) {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-          }
-        }
-      });
-    });
-
-    // Modal close
-    document.querySelectorAll('.modal').forEach(modal => {
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-          modal.classList.add('hidden');
-          modal.classList.remove('flex');
-          document.body.style.overflow = '';
-        }
-      });
-      modal.querySelector('.modal-close')?.addEventListener('click', () => {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
-        document.body.style.overflow = '';
-      });
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        document.querySelectorAll('.modal').forEach(modal => {
-          modal.classList.add('hidden');
-          modal.classList.remove('flex');
-        });
-        document.body.style.overflow = '';
-      }
-    });
   </script>
+
+  <script type="module" src={projectDialogsUrl} is:inline></script>
 </Layout>

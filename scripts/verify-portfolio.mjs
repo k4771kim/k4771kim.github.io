@@ -285,6 +285,175 @@ async function verifyBodyGraphBoundary(browser) {
   }
 }
 
+async function verifyDialogContract(browser) {
+  const context = await browser.newContext({
+    viewport: { width: 1280, height: 900 },
+  });
+  const page = await context.newPage();
+  const consoleErrors = [];
+  const pageErrors = [];
+
+  page.on('console', (message) => {
+    if (message.type() === 'error') consoleErrors.push(message.text());
+  });
+  page.on('pageerror', (error) => pageErrors.push(error.message));
+
+  try {
+    await page.goto(baseUrl, { waitUntil: 'domcontentloaded' });
+    const triggers = page.locator('.detail-btn');
+    assert.equal(await triggers.count(), expectedProjectTitles.length);
+
+    const titleIds = new Set();
+    for (let index = 0; index < expectedProjectTitles.length; index += 1) {
+      const trigger = triggers.nth(index);
+      const modalId = await trigger.getAttribute('data-modal-target');
+      assert.ok(modalId, `project ${index + 1} has no dialog target`);
+
+      const dialog = page.locator(`#${modalId}`);
+      const labelledBy = await dialog.getAttribute('aria-labelledby');
+      assert.ok(labelledBy, `${modalId} has no accessible name reference`);
+      titleIds.add(labelledBy);
+      assert.equal(await dialog.evaluate((element) => element.tagName), 'DIALOG');
+      assert.equal(
+        (await page.locator(`#${labelledBy}`).innerText()).trim(),
+        expectedProjectTitles[index],
+      );
+      assert.equal(
+        await dialog.locator('.modal-close').getAttribute('aria-label'),
+        `${expectedProjectTitles[index]} 상세 닫기`,
+      );
+
+      for (const [pathIndex, closePath] of [
+        'escape',
+        'close-button',
+        'backdrop',
+      ].entries()) {
+        const previousOverflow = pathIndex % 2 === 0 ? 'clip' : 'visible';
+        await page.evaluate((overflow) => {
+          document.body.style.overflow = overflow;
+        }, previousOverflow);
+        await trigger.scrollIntoViewIfNeeded();
+        await trigger.focus();
+        await trigger.press((index + pathIndex) % 2 === 0 ? 'Enter' : 'Space');
+
+        assert.equal(await dialog.evaluate((element) => element.open), true);
+        assert.equal(await page.locator('dialog.modal[open]').count(), 1);
+        assert.equal(
+          await dialog.locator('.modal-close').evaluate(
+            (button) => button === document.activeElement,
+          ),
+          true,
+          `${modalId} did not focus its deterministic first control`,
+        );
+        assert.equal(
+          await page.evaluate((id) => {
+            const modal = document.getElementById(id);
+            document.querySelector('#main-nav a')?.focus();
+            return modal?.contains(document.activeElement) ?? false;
+          }, modalId),
+          true,
+          `${modalId} allowed background focus while modal`,
+        );
+
+        await page.keyboard.press('Shift+Tab');
+        const reverseTabState = await dialog.evaluate((element) => ({
+          insideDialog: element.contains(document.activeElement),
+          atDocumentBoundary: document.activeElement === document.body,
+        }));
+        assert.equal(
+          reverseTabState.insideDialog || reverseTabState.atDocumentBoundary,
+          true,
+          `${modalId} moved reverse tab focus to background content`,
+        );
+        if (reverseTabState.atDocumentBoundary) {
+          await page.keyboard.press('Tab');
+          assert.equal(
+            await dialog.evaluate((element) => element.contains(document.activeElement)),
+            true,
+            `${modalId} did not return focus from the document boundary`,
+          );
+        }
+
+        await dialog.locator('[data-modal-panel]').click({
+          position: { x: 24, y: 24 },
+        });
+        assert.equal(
+          await dialog.evaluate((element) => element.open),
+          true,
+          `${modalId} closed after an inside-panel click`,
+        );
+
+        if (closePath === 'escape') {
+          await page.keyboard.press('Escape');
+        } else if (closePath === 'close-button') {
+          await dialog.locator('.modal-close').click();
+        } else {
+          await dialog.click({ position: { x: 2, y: 2 } });
+        }
+
+        await dialog.waitFor({ state: 'hidden' });
+        await page.waitForFunction(
+          (overflow) => document.body.style.overflow === overflow,
+          previousOverflow,
+        );
+        assert.equal(await dialog.evaluate((element) => element.open), false);
+        assert.equal(
+          await trigger.evaluate((button) => button === document.activeElement),
+          true,
+          `${modalId} did not restore focus after ${closePath}`,
+        );
+        assert.equal(
+          await page.evaluate(() => document.body.style.overflow),
+          previousOverflow,
+          `${modalId} did not restore body overflow after ${closePath}`,
+        );
+      }
+    }
+    assert.equal(titleIds.size, expectedProjectTitles.length);
+
+    const firstTrigger = triggers.nth(0);
+    const secondTrigger = triggers.nth(1);
+    const firstModalId = await firstTrigger.getAttribute('data-modal-target');
+    const secondModalId = await secondTrigger.getAttribute('data-modal-target');
+    assert.ok(firstModalId && secondModalId);
+    await page.evaluate(() => {
+      document.body.style.overflow = 'scroll';
+    });
+    await firstTrigger.click();
+    await page.evaluate(() => {
+      document
+        .querySelectorAll('.detail-btn')[1]
+        ?.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+    });
+    assert.equal(await page.locator('dialog.modal[open]').count(), 1);
+    assert.equal(
+      await page.locator(`#${firstModalId}`).evaluate((element) => element.open),
+      false,
+    );
+    assert.equal(
+      await page.locator(`#${secondModalId}`).evaluate((element) => element.open),
+      true,
+    );
+    assert.equal(await page.evaluate(() => document.body.style.overflow), 'hidden');
+    await page.locator(`#${secondModalId} .modal-close`).click();
+    await page.waitForFunction(
+      ({ id, overflow }) =>
+        document.querySelector(`[data-modal-target="${id}"]`) ===
+          document.activeElement && document.body.style.overflow === overflow,
+      { id: secondModalId, overflow: 'scroll' },
+    );
+    assert.equal(
+      await secondTrigger.evaluate((button) => button === document.activeElement),
+      true,
+    );
+
+    assert.deepEqual(pageErrors, [], 'dialog page errors');
+    assert.deepEqual(consoleErrors, [], 'dialog console errors');
+  } finally {
+    await context.close();
+  }
+}
+
 await mkdir(screenshotDir, { recursive: true });
 
 const browser = await chromium.launch({
@@ -300,6 +469,7 @@ const browser = await chromium.launch({
 
 try {
   await verifyBodyGraphBoundary(browser);
+  await verifyDialogContract(browser);
 
   for (const viewport of viewports) {
     const page = await browser.newPage({ viewport });
