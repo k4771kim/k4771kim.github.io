@@ -9,6 +9,7 @@ role: "Frontend Developer (React)"
 links: []
 year: 2022
 order: 900
+featured: true
 ---
 
 전세계 주식 백테스팅이 가능한 퀀트 투자 분석 툴.

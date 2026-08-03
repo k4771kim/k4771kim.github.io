@@ -10,7 +10,8 @@ links:
   - label: "Web"
     url: "https://humandesignhub.app"
 year: 2025
-order: 700
+order: 1000
+featured: true
 ---
 
 무료 휴먼디자인 차트 계산 및 분석 웹앱.

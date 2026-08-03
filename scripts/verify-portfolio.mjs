@@ -10,11 +10,19 @@ const viewports = [
   { name: 'desktop', width: 1440, height: 1000 },
 ];
 const expectedCounts = {
-  all: 14,
+  all: 6,
   'AI Agent': 1,
-  Web: 3,
-  Mobile: 10,
+  Web: 2,
+  Mobile: 3,
 };
+const expectedProjectTitles = [
+  'Linchpin',
+  'HDHub',
+  'Allatte',
+  'Boolio',
+  'Elice Mobile',
+  '포룸 인테리어',
+];
 
 await mkdir(screenshotDir, { recursive: true });
 
@@ -70,6 +78,13 @@ try {
       path: new URL(`${viewport.name}-hdhub-card.png`, screenshotDir).pathname,
     });
 
+    const projectTitles = await page.locator('#project-grid h4').allTextContents();
+    assert.deepEqual(
+      projectTitles.map((title) => title.trim()),
+      expectedProjectTitles,
+    );
+    assert.equal(await page.locator('.modal').count(), expectedProjectTitles.length);
+
     const filterLabels = await page.locator('.filter-btn').allTextContents();
     assert.deepEqual(
       filterLabels.map((label) => label.trim()),
@@ -109,7 +124,10 @@ try {
     await allFilter.focus();
     await allFilter.press('Space');
     assert.equal(await allFilter.getAttribute('aria-pressed'), 'true');
-    assert.equal(await page.locator('#project-grid > div:not([hidden])').count(), 14);
+    assert.equal(
+      await page.locator('#project-grid > div:not([hidden])').count(),
+      expectedCounts.all,
+    );
 
     assert.equal(
       await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth),
