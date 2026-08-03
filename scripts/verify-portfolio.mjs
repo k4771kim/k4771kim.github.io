@@ -518,6 +518,28 @@ try {
       );
     }
 
+    const heroIntroGutter = await page.locator('[data-hero-intro]').evaluate((intro) => {
+      const rect = intro.getBoundingClientRect();
+      return {
+        left: rect.left,
+        right: innerWidth - rect.right,
+      };
+    });
+    const expectedHeroGutter =
+      viewport.width < 640
+        ? 36
+        : viewport.width < 1024
+          ? 112
+          : Math.max(80, (viewport.width - 1024) / 2);
+    assert.ok(
+      Math.abs(heroIntroGutter.left - heroIntroGutter.right) <= 1,
+      `${viewport.name} hero introduction is not horizontally centered`,
+    );
+    assert.ok(
+      Math.abs(heroIntroGutter.left - expectedHeroGutter) <= 1,
+      `${viewport.name} hero introduction gutter changed: ${JSON.stringify(heroIntroGutter)}`,
+    );
+
     await page.screenshot({
       path: new URL(`${viewport.name}-hero.png`, screenshotDir).pathname,
     });
