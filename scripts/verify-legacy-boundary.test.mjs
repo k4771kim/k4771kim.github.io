@@ -10,6 +10,7 @@ import {
   assertHead,
   classifyCandidate,
   deriveHistoricalRoute,
+  inventory,
   listLegacyCandidates,
   recordTag,
   verifyLive,
@@ -186,6 +187,35 @@ test('locks the audited HEAD and candidate digests before deletion', async () =>
   );
 });
 
+test('refuses to inventory candidate changes that are absent from the audited commit', async () => {
+  const { root } = await fixture();
+  await put(root, 'index.html', '<h1>uncommitted legacy change</h1>\n');
+  await assert.rejects(
+    () =>
+      inventory({
+        baseUrl: 'https://example.test',
+        out: 'docs/rejected-inventory.json',
+        root,
+      }),
+    /working tree differs from audited HEAD/,
+  );
+});
+
+test('refuses a manifest classification that weakens the preservation decision', async () => {
+  const { root, manifest } = await fixture();
+  manifest.candidates[0].classification = 'generated-site';
+  manifest.candidates[0].preserve = false;
+  await put(
+    root,
+    'docs/legacy-preservation.json',
+    `${JSON.stringify(manifest, null, 2)}\n`,
+  );
+  await assert.rejects(
+    () => verifyStatic({ manifestPath: 'docs/legacy-preservation.json', root }),
+    /Invalid or unclassified manifest candidate/,
+  );
+});
+
 test('fails while legacy candidates are active and passes after exact removal', async () => {
   const { root } = await fixture();
   await assert.rejects(
@@ -200,6 +230,39 @@ test('fails while legacy candidates are active and passes after exact removal', 
   git(root, 'rm', '--cached', '_config.yml', 'index.html', 'mail/contact_me.php');
   await mkdir(join(root, 'dist'), { recursive: true });
   await verifyStatic({ manifestPath: 'docs/legacy-preservation.json', root });
+});
+
+test('rejects files outside the exact in-repo archive allowlist', async () => {
+  const { root, manifest } = await fixture();
+  await Promise.all(
+    ['_config.yml', 'index.html', 'mail/contact_me.php'].map((path) =>
+      unlink(join(root, path)),
+    ),
+  );
+  git(root, 'rm', '--cached', '_config.yml', 'index.html', 'mail/contact_me.php');
+  await put(root, 'archive/legacy/index.html', '<h1>preserved</h1>\n');
+  await put(root, 'archive/legacy/extra.html', '<h1>unreviewed</h1>\n');
+  manifest.preservation = {
+    method: 'in-repo-archive',
+    recoveryRef: 'archive/legacy',
+    files: [
+      {
+        source: 'index.html',
+        destination: 'archive/legacy/index.html',
+        digest: manifest.candidates.find((entry) => entry.path === 'index.html').digest,
+      },
+    ],
+  };
+  await put(
+    root,
+    'docs/legacy-preservation.json',
+    `${JSON.stringify(manifest, null, 2)}\n`,
+  );
+  await mkdir(join(root, 'dist'), { recursive: true });
+  await assert.rejects(
+    () => verifyStatic({ manifestPath: 'docs/legacy-preservation.json', root }),
+    /differs from its exact allowlist/,
+  );
 });
 
 test('detects regression of a route that was live before deletion', async () => {

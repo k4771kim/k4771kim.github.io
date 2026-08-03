@@ -3,6 +3,7 @@ import {
   access,
   mkdir,
   readFile,
+  readdir,
   rename,
   writeFile,
 } from 'node:fs/promises';
@@ -69,6 +70,17 @@ function compareText(left, right) {
 function listTrackedFiles(root = defaultRoot) {
   const output = runGit(['ls-files', '-z'], root);
   return output ? output.split('\0').filter(Boolean).map(normalizePath) : [];
+}
+
+async function listFilesRecursively(directory) {
+  if (!(await exists(directory))) return [];
+  const files = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    const path = resolve(directory, entry.name);
+    if (entry.isDirectory()) files.push(...(await listFilesRecursively(path)));
+    if (entry.isFile()) files.push(path);
+  }
+  return files.sort(compareText);
 }
 
 export function isLegacyCandidate(path) {
@@ -233,12 +245,14 @@ function assertManifestShape(manifest) {
     throw new Error('Legacy manifest contains duplicate candidate paths');
   }
   for (const entry of manifest.candidates) {
+    const expectedBoundary = classifyCandidate(entry.path);
     if (
       !isLegacyCandidate(entry.path) ||
-      typeof entry.classification !== 'string' ||
-      typeof entry.preserve !== 'boolean' ||
+      entry.classification !== expectedBoundary.classification ||
+      entry.preserve !== expectedBoundary.preserve ||
       typeof entry.digest !== 'string' ||
       !Object.hasOwn(entry, 'historicalRoute') ||
+      entry.historicalRoute !== deriveHistoricalRoute(entry.path) ||
       (entry.historicalRoute !== null &&
         (!entry.preDeletion || typeof entry.preDeletion.status !== 'number'))
     ) {
@@ -265,6 +279,15 @@ export async function inventory({ baseUrl, out, root = defaultRoot }) {
   if (!baseUrl || !out) throw new Error('inventory requires --base-url and --out');
   const candidates = listLegacyCandidates(listTrackedFiles(root));
   if (candidates.length === 0) throw new Error('No tracked legacy candidates found');
+  const changedCandidates = runGit(
+    ['diff', '--name-only', 'HEAD', '--', ...candidates],
+    root,
+  );
+  if (changedCandidates) {
+    throw new Error(
+      `Legacy working tree differs from audited HEAD: ${changedCandidates.replaceAll('\n', ', ')}`,
+    );
+  }
 
   const classified = candidates.map((path) => ({
     path,
@@ -465,6 +488,18 @@ export async function verifyStatic({ manifestPath, root = defaultRoot }) {
   for (const path of archiveAllowlist) {
     if (!(await exists(resolve(root, path)))) {
       throw new Error(`Archived preservation file is missing: ${path}`);
+    }
+  }
+  if (manifest.preservation.method === 'in-repo-archive') {
+    const archiveRoot = resolve(root, ALLOWED_ARCHIVE_DESTINATION);
+    const archivedFiles = (await listFilesRecursively(archiveRoot)).map((path) =>
+      normalizePath(relative(root, path)),
+    );
+    const expectedFiles = [...archiveAllowlist].sort(compareText);
+    if (JSON.stringify(archivedFiles) !== JSON.stringify(expectedFiles)) {
+      throw new Error(
+        `In-repo archive differs from its exact allowlist: ${JSON.stringify(archivedFiles)}`,
+      );
     }
   }
   await verifyPagesBoundary(root);
