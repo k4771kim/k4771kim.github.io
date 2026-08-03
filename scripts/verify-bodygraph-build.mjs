@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
-import { readFile, readdir, stat, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
 import { gzipSync } from 'node:zlib';
 
 const root = new URL('../', import.meta.url);
 const dist = new URL('dist/', root);
 const manifestPath = new URL('portfolio-client-manifest.json', dist);
-const baselinePath = new URL('.omx/qa/portfolio/baseline.json', root);
+const baselinePath = new URL('scripts/portfolio-baseline.json', root);
 const metricsPath = new URL('.omx/qa/portfolio/bodygraph-metrics.json', root);
 
 const heavyModulePatterns = [
@@ -170,6 +170,7 @@ const metrics = {
   },
 };
 
+await mkdir(new URL('.omx/qa/portfolio/', root), { recursive: true });
 await writeFile(metricsPath, `${JSON.stringify(metrics, null, 2)}\n`);
 
 console.log(

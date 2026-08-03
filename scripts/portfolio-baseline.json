@@ -1,0 +1,17 @@
+{
+  "capturedAt": "2026-08-03T15:11:40+09:00",
+  "gitSha": "2eaa07147836ad45736fdb32d9408ffaec56f5c6",
+  "dist": {
+    "indexHtmlBytes": 85503,
+    "fileCount": 77,
+    "totalBytes": 14254080,
+    "emittedJavaScriptGzipBytes": 1050529,
+    "nonBodyGraphJavaScriptGzipBytes": 103460
+  },
+  "bodyGraph": {
+    "chunk": "dist/_astro/BodyGraphWrapper.DAFD3GBI.js",
+    "bytes": 3270390,
+    "gzipBytes": 947069,
+    "loadsOnInitialPage": true
+  }
+}
