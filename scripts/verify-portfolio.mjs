@@ -64,6 +64,12 @@ try {
     assert.ok(!normalizedTags.includes('LangChain'));
     assert.ok(!normalizedTags.includes('LangGraph'));
 
+    const hdhubCard = page.locator('#project-grid > div').filter({ hasText: 'HDHub' }).first();
+    assert.match(await hdhubCard.locator('img').getAttribute('src'), /hdhub-logo/);
+    await hdhubCard.screenshot({
+      path: new URL(`${viewport.name}-hdhub-card.png`, screenshotDir).pathname,
+    });
+
     const filterLabels = await page.locator('.filter-btn').allTextContents();
     assert.deepEqual(
       filterLabels.map((label) => label.trim()),

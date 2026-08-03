@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title description">
+  <title id="title">Human Design Hub</title>
+  <desc id="description">Five connected nodes on a blue to purple gradient</desc>
+  <defs>
+    <linearGradient id="background" x1="20" y1="20" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2D34ED"/>
+      <stop offset="1" stop-color="#9B51E0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="200" height="200" rx="44" fill="url(#background)"/>
+
+  <g opacity="0.4" fill="#FFF" stroke="#FFF" stroke-width="3">
+    <circle cx="60" cy="60" r="4" stroke="none"/>
+    <circle cx="140" cy="80" r="4" stroke="none"/>
+    <circle cx="100" cy="140" r="4" stroke="none"/>
+    <path d="M60 60 140 80 100 140" fill="none"/>
+  </g>
+
+  <g transform="translate(40 40) scale(5)" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="2.8" fill="#FFF" stroke-width="1.8"/>
+    <path d="M12 12V4M12 12l7.61-2.47M12 12l4.7 6.47M12 12l-4.7 6.47M12 12 4.39 9.53" stroke-width="1.5"/>
+    <circle cx="12" cy="4" r="1.6" fill="#FFF" stroke="none"/>
+    <circle cx="19.61" cy="9.53" r="1.6" fill="#FFF" stroke="none"/>
+    <circle cx="16.7" cy="18.47" r="1.6" fill="#FFF" stroke="none"/>
+    <circle cx="7.3" cy="18.47" r="1.6" fill="#FFF" stroke="none"/>
+    <circle cx="4.39" cy="9.53" r="1.6" fill="#FFF" stroke="none"/>
+  </g>
+</svg>
