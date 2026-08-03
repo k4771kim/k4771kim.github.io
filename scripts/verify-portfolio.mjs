@@ -493,6 +493,31 @@ try {
     assert.match(await firstSkill.innerText(), /AI Agent Engineering/);
     assert.equal(await firstSkill.getAttribute('aria-expanded'), 'true');
 
+    const pageContainerGutters = await page
+      .locator('[data-page-container]')
+      .evaluateAll((containers) =>
+        containers.map((container) => {
+          const rect = container.getBoundingClientRect();
+          const style = getComputedStyle(container);
+          return {
+            left: rect.left + Number.parseFloat(style.paddingLeft),
+            right: innerWidth - rect.right + Number.parseFloat(style.paddingRight),
+          };
+        }),
+      );
+    const maximumGutter = viewport.width < 640 ? 24 : viewport.width < 1024 ? 40 : 144;
+    assert.equal(pageContainerGutters.length, 4, 'all page containers must share the gutter contract');
+    for (const gutter of pageContainerGutters) {
+      assert.ok(
+        Math.abs(gutter.left - gutter.right) <= 1,
+        `${viewport.name} page container is not horizontally centered`,
+      );
+      assert.ok(
+        Math.max(gutter.left, gutter.right) <= maximumGutter,
+        `${viewport.name} page gutter exceeds ${maximumGutter}px: ${JSON.stringify(gutter)}`,
+      );
+    }
+
     await page.screenshot({
       path: new URL(`${viewport.name}-hero.png`, screenshotDir).pathname,
     });

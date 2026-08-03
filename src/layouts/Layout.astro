@@ -64,7 +64,7 @@ const structuredData = {
     <script is:inline type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     <title>{title}</title>
   </head>
-  <body class="bg-[--background] sm:px-28 lg:px-20 px-9">
+  <body class="bg-[--background]">
     <slot />
   </body>
 </html>
@@ -89,6 +89,25 @@ const structuredData = {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+  }
+
+  .page-container {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .page-container {
+      padding-inline: 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .page-container {
+      padding-inline: 3rem;
+    }
   }
 
   *::selection {
