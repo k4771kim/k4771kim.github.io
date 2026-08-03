@@ -9,12 +9,14 @@
     "dev": "astro dev",
     "check": "astro check",
     "test:runner": "node --test scripts/run-portfolio-ci.test.mjs",
+    "test:content": "node --test scripts/verify-content-boundary.test.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "verify:bodygraph": "node scripts/verify-bodygraph-build.mjs",
+    "verify:content": "node scripts/verify-content-boundary.mjs",
     "verify:portfolio": "node scripts/verify-portfolio.mjs",
     "verify:ci": "node scripts/run-portfolio-ci.mjs",
-    "quality": "npm run check && npm run test:runner && npm run build && npm run verify:bodygraph && npm run verify:ci",
+    "quality": "npm run check && npm run test:runner && npm run build && npm run verify:content && npm run test:content && npm run verify:bodygraph && npm run verify:ci",
     "astro": "astro"
   },
   "dependencies": {
@@ -24,7 +26,6 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "astro": "7.1.6",
-    "ogl": "^1.0.11",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "tailwindcss": "^3.4.19",

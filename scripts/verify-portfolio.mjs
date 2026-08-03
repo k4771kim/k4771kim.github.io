@@ -552,6 +552,12 @@ try {
     assert.equal(await page.locator(`#${modalId}`).isVisible(), true);
     await page.keyboard.press('Escape');
     assert.equal(await page.locator(`#${modalId}`).isHidden(), true);
+    await page.waitForFunction(
+      (id) =>
+        document.querySelector(`[data-modal-target="${id}"]`) ===
+        document.activeElement,
+      modalId,
+    );
 
     const allFilter = page.locator('.filter-btn[data-filter="all"]');
     await allFilter.focus();

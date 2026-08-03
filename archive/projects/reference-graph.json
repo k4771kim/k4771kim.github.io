@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "activeProjectFiles": [
+    "01-foroom.md",
+    "09-elicemobile.md",
+    "11-boolio.md",
+    "12-allatte.md",
+    "14-humandesignhub.md",
+    "15-linchpin.md"
+  ],
+  "archivedProjectFiles": [
+    "02-voiceofthousands.md",
+    "03-ardrumoid.md",
+    "04-recipedia.md",
+    "05-lookar.md",
+    "06-andante.md",
+    "07-madlen.md",
+    "10-marketvillage.md",
+    "13-sajuhub.md"
+  ],
+  "projects": {
+    "content/projects/02-voiceofthousands.md": {
+      "title": "천 개의 목소리",
+      "featured": false,
+      "images": [
+        "assets/portfolio/VOT.png",
+        "assets/portfolio/VOT_view.png"
+      ]
+    },
+    "content/projects/03-ardrumoid.md": {
+      "title": "arDRUMoid",
+      "featured": false,
+      "images": [
+        "assets/portfolio/ardrumoid.png"
+      ]
+    },
+    "content/projects/04-recipedia.md": {
+      "title": "레시피디아",
+      "featured": false,
+      "images": [
+        "assets/portfolio/recipedia.png",
+        "assets/portfolio/recipedia_view.png"
+      ]
+    },
+    "content/projects/05-lookar.md": {
+      "title": "LooKar",
+      "featured": false,
+      "images": [
+        "assets/portfolio/lookar.png",
+        "assets/portfolio/lookar_view.png"
+      ]
+    },
+    "content/projects/06-andante.md": {
+      "title": "Andante",
+      "featured": false,
+      "images": [
+        "assets/portfolio/andante.png",
+        "assets/portfolio/andante_view.png"
+      ]
+    },
+    "content/projects/07-madlen.md": {
+      "title": "Madlen",
+      "featured": false,
+      "images": [
+        "assets/portfolio/madlen.png",
+        "assets/portfolio/madlen_view.jpg"
+      ]
+    },
+    "content/projects/10-marketvillage.md": {
+      "title": "Market Village",
+      "featured": false,
+      "images": [
+        "assets/portfolio/marketvilliage.png",
+        "assets/portfolio/marketvilliage_view.png"
+      ]
+    },
+    "content/projects/13-sajuhub.md": {
+      "title": "SajuHub",
+      "featured": false,
+      "images": [
+        "assets/portfolio/sajuhub.png",
+        "assets/portfolio/sajuhub_view.png"
+      ]
+    }
+  },
+  "assets": {
+    "assets/portfolio/VOT.png": [
+      "content/projects/02-voiceofthousands.md"
+    ],
+    "assets/portfolio/VOT_view.png": [
+      "content/projects/02-voiceofthousands.md"
+    ],
+    "assets/portfolio/andante.png": [
+      "content/projects/06-andante.md"
+    ],
+    "assets/portfolio/andante_view.png": [
+      "content/projects/06-andante.md"
+    ],
+    "assets/portfolio/ardrumoid.png": [
+      "content/projects/03-ardrumoid.md"
+    ],
+    "assets/portfolio/lookar.png": [
+      "content/projects/05-lookar.md"
+    ],
+    "assets/portfolio/lookar_view.png": [
+      "content/projects/05-lookar.md"
+    ],
+    "assets/portfolio/madlen.png": [
+      "content/projects/07-madlen.md"
+    ],
+    "assets/portfolio/madlen_view.jpg": [
+      "content/projects/07-madlen.md"
+    ],
+    "assets/portfolio/marketvilliage.png": [
+      "content/projects/10-marketvillage.md"
+    ],
+    "assets/portfolio/marketvilliage_view.png": [
+      "content/projects/10-marketvillage.md"
+    ],
+    "assets/portfolio/recipedia.png": [
+      "content/projects/04-recipedia.md"
+    ],
+    "assets/portfolio/recipedia_view.png": [
+      "content/projects/04-recipedia.md"
+    ],
+    "assets/portfolio/sajuhub.png": [
+      "content/projects/13-sajuhub.md"
+    ],
+    "assets/portfolio/sajuhub_view.png": [
+      "content/projects/13-sajuhub.md"
+    ]
+  }
+}
