@@ -488,6 +488,14 @@ try {
     const h1 = (await page.locator('h1').innerText()).replaceAll('\n', ' ');
     assert.match(h1, /AI Agent\s+&\s+Full-Stack\s+Engineer/);
 
+    const heroSummary = (await page.locator('[data-hero-summary]').innerText())
+      .replaceAll(/\s+/g, ' ')
+      .trim();
+    assert.equal(
+      heroSummary,
+      '멀티플랫폼 제품 개발 경험을 바탕으로 Agent Workflow와 RAG를 설계하고, Kubernetes 환경에서 구현·운영합니다.',
+    );
+
     const firstSkill = page.locator('button[aria-controls^="skill-panel-"]').first();
     await firstSkill.waitFor();
     assert.match(await firstSkill.innerText(), /AI Agent Engineering/);
