@@ -48,6 +48,7 @@ async function runTestPair({ serverCode = healthyServer, verificationExitCode = 
     previewCommand: [process.execPath, '-e', serverCode, String(port)],
     verificationCommand: [process.execPath, '-e', `process.exit(${verificationExitCode})`],
     url,
+    expectedReadinessBody: 'ready',
     stdio: 'ignore',
     readyTimeoutMs: 1_500,
     readyIntervalMs: 25,
@@ -77,6 +78,7 @@ test('times out readiness and terminates the preview process', async () => {
       previewCommand: [process.execPath, '-e', 'setInterval(() => {}, 1000)'],
       verificationCommand: [process.execPath, '-e', 'process.exit(0)'],
       url,
+      expectedReadinessBody: 'ready',
       stdio: 'ignore',
       readyTimeoutMs: 100,
       readyIntervalMs: 20,
@@ -90,7 +92,7 @@ test('times out readiness and terminates the preview process', async () => {
   );
 });
 
-test('rejects a pre-bound preview port without accepting or stopping its owner', async () => {
+test('rejects foreign readiness when the preview serves on another port', async () => {
   const foreignServer = createHttpServer((_, response) => {
     response.writeHead(200, { 'content-type': 'text/plain', connection: 'close' });
     response.end('foreign');
@@ -103,15 +105,20 @@ test('rejects a pre-bound preview port without accepting or stopping its owner',
   try {
     await assert.rejects(
       runPreviewVerification({
-        previewCommand: [process.execPath, '-e', healthyServer, String(address.port)],
+        previewCommand: [process.execPath, '-e', healthyServer, '0'],
         verificationCommand: [process.execPath, '-e', 'process.exit(0)'],
         url,
+        expectedReadinessBody: 'ready',
         stdio: 'ignore',
         readyTimeoutMs: 500,
         readyIntervalMs: 20,
         stopTimeoutMs: 100,
       }),
-      /Preview port is already in use/,
+      (error) => {
+        assert.match(error.message, /readiness timed out/);
+        assert.equal(error.cleanupSignal, 'SIGTERM');
+        return true;
+      },
     );
 
     const response = await fetch(url);
@@ -121,6 +128,11 @@ test('rejects a pre-bound preview port without accepting or stopping its owner',
       foreignServer.close((error) => error ? reject(error) : resolve());
     });
   }
+});
+
+test('Astro forwards strict preview binding through Vite configuration', async () => {
+  const astroConfig = (await import(new URL('../astro.config.mjs', import.meta.url))).default;
+  assert.equal(astroConfig.vite?.preview?.strictPort, true);
 });
 
 test('escalates from TERM to KILL for an uncooperative preview', async () => {

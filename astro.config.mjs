@@ -59,6 +59,9 @@ export default defineConfig({
   site: 'https://k4771kim.github.io',
   integrations: [react()],
   vite: {
+    preview: {
+      strictPort: true,
+    },
     plugins: [portfolioClientManifest()],
     resolve: {
       alias: {

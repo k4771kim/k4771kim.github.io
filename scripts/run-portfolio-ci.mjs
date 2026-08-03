@@ -1,6 +1,7 @@
 import { spawn } from 'node:child_process';
+import { randomUUID } from 'node:crypto';
 import { once } from 'node:events';
-import { createServer } from 'node:net';
+import { rm, writeFile } from 'node:fs/promises';
 import process from 'node:process';
 import { setTimeout as delay } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
@@ -11,31 +12,6 @@ const DEFAULT_STOP_TIMEOUT_MS = 2_000;
 
 function isRunning(child) {
   return child.exitCode === null && child.signalCode === null;
-}
-
-async function assertPortAvailable(url) {
-  const target = new URL(url);
-  const host = target.hostname;
-  const port = Number(target.port || (target.protocol === 'https:' ? 443 : 80));
-  const probe = createServer();
-
-  try {
-    await new Promise((resolve, reject) => {
-      probe.once('error', reject);
-      probe.listen({ host, port, exclusive: true }, resolve);
-    });
-  } catch (error) {
-    if (error.code === 'EADDRINUSE') {
-      throw new Error(`Preview port is already in use: ${host}:${port}`, { cause: error });
-    }
-    throw error;
-  } finally {
-    if (probe.listening) {
-      await new Promise((resolve, reject) => {
-        probe.close((error) => error ? reject(error) : resolve());
-      });
-    }
-  }
 }
 
 function signalProcessTree(child, signal) {
@@ -68,7 +44,14 @@ async function stopProcessTree(child, timeoutMs) {
   return child.signalCode ?? 'SIGKILL';
 }
 
-async function waitForHttp(url, preview, getSpawnError, timeoutMs, intervalMs) {
+async function waitForHttp(
+  url,
+  expectedBody,
+  preview,
+  getSpawnError,
+  timeoutMs,
+  intervalMs,
+) {
   const deadline = Date.now() + timeoutMs;
 
   while (Date.now() < deadline) {
@@ -80,8 +63,8 @@ async function waitForHttp(url, preview, getSpawnError, timeoutMs, intervalMs) {
 
     try {
       const response = await fetch(url, { signal: AbortSignal.timeout(1_000) });
-      await response.body?.cancel();
-      if (response.ok) return;
+      const body = await response.text();
+      if (response.ok && body === expectedBody) return;
     } catch {
       // The preview process is still starting.
     }
@@ -107,6 +90,8 @@ export async function runPreviewVerification({
   previewCommand,
   verificationCommand,
   url,
+  readinessUrl = url,
+  expectedReadinessBody,
   cwd = process.cwd(),
   env = process.env,
   stdio = 'inherit',
@@ -114,7 +99,9 @@ export async function runPreviewVerification({
   readyIntervalMs = DEFAULT_READY_INTERVAL_MS,
   stopTimeoutMs = DEFAULT_STOP_TIMEOUT_MS,
 }) {
-  await assertPortAvailable(url);
+  if (typeof expectedReadinessBody !== 'string') {
+    throw new TypeError('expectedReadinessBody must be a string');
+  }
 
   const [previewExecutable, ...previewArgs] = previewCommand;
   const preview = spawn(previewExecutable, previewArgs, {
@@ -133,7 +120,8 @@ export async function runPreviewVerification({
 
   try {
     await waitForHttp(
-      url,
+      readinessUrl,
+      expectedReadinessBody,
       preview,
       () => previewSpawnError,
       readyTimeoutMs,
@@ -163,23 +151,35 @@ async function main() {
   const url = `http://${host}:${port}`;
   const npmExecutable = process.platform === 'win32' ? 'npm.cmd' : 'npm';
   const verificationScript = fileURLToPath(new URL('./verify-portfolio.mjs', import.meta.url));
-  const result = await runPreviewVerification({
-    previewCommand: [
-      npmExecutable,
-      'run',
-      'preview',
-      '--',
-      '--host',
-      host,
-      '--port',
-      port,
-      '--strictPort',
-    ],
-    verificationCommand: [process.execPath, verificationScript],
-    url,
-  });
+  const readinessFileName = `portfolio-readiness-${randomUUID()}.txt`;
+  const readinessBody = randomUUID();
+  const readinessFile = fileURLToPath(
+    new URL(`../dist/${readinessFileName}`, import.meta.url),
+  );
 
-  process.exitCode = result.exitCode;
+  await writeFile(readinessFile, readinessBody, { flag: 'wx' });
+  try {
+    const result = await runPreviewVerification({
+      previewCommand: [
+        npmExecutable,
+        'run',
+        'preview',
+        '--',
+        '--host',
+        host,
+        '--port',
+        port,
+      ],
+      verificationCommand: [process.execPath, verificationScript],
+      url,
+      readinessUrl: new URL(readinessFileName, `${url}/`).href,
+      expectedReadinessBody: readinessBody,
+    });
+
+    process.exitCode = result.exitCode;
+  } finally {
+    await rm(readinessFile, { force: true });
+  }
 }
 
 const isDirectExecution = process.argv[1]
