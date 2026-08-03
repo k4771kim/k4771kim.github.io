@@ -4,9 +4,13 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
+    "check": "astro check",
+    "test:runner": "node --test scripts/run-portfolio-ci.test.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "verify:portfolio": "node scripts/verify-portfolio.mjs",
+    "verify:ci": "node scripts/run-portfolio-ci.mjs",
+    "quality": "npm run check && npm run test:runner && npm run build && npm run verify:ci",
     "astro": "astro"
   },
   "dependencies": {
@@ -24,8 +28,10 @@
     "three": "^0.183.0"
   },
   "devDependencies": {
+    "@astrojs/check": "0.9.10",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "playwright": "^1.58.2"
+    "playwright": "^1.58.2",
+    "typescript": "6.0.3"
   }
 }

@@ -9,6 +9,12 @@
       "@components/*": ["src/components/*"]
     }
   },
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "include": [
+    ".astro/types.d.ts",
+    "astro.config.mjs",
+    "tailwind.config.mjs",
+    "scripts/**/*",
+    "src/**/*"
+  ],
+  "exclude": ["dist", "node_modules"]
 }
