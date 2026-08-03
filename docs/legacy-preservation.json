@@ -1,0 +1,1572 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-03T07:57:37.048Z",
+  "auditedSha": "a6da2ced17cda7bea53f500de7df821e8f937832",
+  "auditedTree": "77bbca6b5f9226b230bf2eb1dd157898abf99440",
+  "baseUrl": "https://k4771kim.github.io",
+  "candidateCount": 137,
+  "pagesUpload": {
+    "workflowPath": ".github/workflows/deploy.yml",
+    "artifactPath": "dist",
+    "verified": true
+  },
+  "preservation": {
+    "method": "annotated-tag",
+    "recoveryRef": "portfolio-legacy-pre-removal-v1",
+    "remote": "origin",
+    "sha": "a6da2ced17cda7bea53f500de7df821e8f937832",
+    "tree": "77bbca6b5f9226b230bf2eb1dd157898abf99440",
+    "tagObjectSha": "ed4972b394859988fffe4c594c1dc10f186a60ce",
+    "verifiedAt": "2026-08-03T07:58:06.998Z"
+  },
+  "candidates": [
+    {
+      "path": "_config.yml",
+      "classification": "jekyll-config",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "e4412b5df58747113946b21f3bed153cd957b290a937141ad54b23106c86dedb",
+      "preDeletion": null
+    },
+    {
+      "path": "_includes/footer.html",
+      "classification": "jekyll-include-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "b17beff04f0602fe936b926139a719de3a1f1ee5db6a73875202842e7a98b270",
+      "preDeletion": null
+    },
+    {
+      "path": "_includes/head.html",
+      "classification": "jekyll-include-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "8089ac95a9a9491903039d0467fa1412cec089dc14eadb65daceca5b3ba4819f",
+      "preDeletion": null
+    },
+    {
+      "path": "_includes/header.html",
+      "classification": "jekyll-include-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "d0dda3aa277bf976af677079f1b8f8a6e7178b478aacb549424a483de1d54fb6",
+      "preDeletion": null
+    },
+    {
+      "path": "_includes/icon-github.html",
+      "classification": "jekyll-include-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "2b1011363debbf1630f3282b7bb4d7b9555a33cffcbd6932ac83c4dc36f01837",
+      "preDeletion": null
+    },
+    {
+      "path": "_includes/icon-github.svg",
+      "classification": "jekyll-include-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "07797ac6a04a3a9232b7fd9d21fd2fe4afacdae4d51dcdda65e7e6dcea248ec8",
+      "preDeletion": null
+    },
+    {
+      "path": "_includes/icon-twitter.html",
+      "classification": "jekyll-include-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "cdb8ae6b01ab6acedcced833c621b789a375944fcc0aef215c8915358ba60b13",
+      "preDeletion": null
+    },
+    {
+      "path": "_includes/icon-twitter.svg",
+      "classification": "jekyll-include-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "cf162a741910c867515b15b3aed13a7f3d19a581a465d63c7c7f818f4c127d42",
+      "preDeletion": null
+    },
+    {
+      "path": "_layouts/default.html",
+      "classification": "jekyll-layout-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "70d84a54841419a5a3535c0b65b68145ba76b87a5f7f3c9255d82f3068320ca3",
+      "preDeletion": null
+    },
+    {
+      "path": "_layouts/page.html",
+      "classification": "jekyll-layout-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "f72f0cf159462936150923cfdae8ef413bfedd4f9b2780fb4be37ae14959ceb3",
+      "preDeletion": null
+    },
+    {
+      "path": "_layouts/post.html",
+      "classification": "jekyll-layout-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "386607fa274ebf1afd8316d628eb9576be89836d49254501f858fc9942ba921d",
+      "preDeletion": null
+    },
+    {
+      "path": "_posts/2017-07-13-KBG's-Git-Blog-Open.markdown",
+      "classification": "jekyll-post-source",
+      "preserve": true,
+      "historicalRoute": "/2017/07/13/KBG's-Git-Blog-Open.html",
+      "digest": "4fd1c58dbc82c6199e2a2a5ae791332094b909e7b23d0a22a18e4f70c1d6c67a",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/13/KBG's-Git-Blog-Open.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_posts/2017-07-23-R-프로그래밍-시작하기.markdown",
+      "classification": "jekyll-post-source",
+      "preserve": true,
+      "historicalRoute": "/2017/07/23/R-프로그래밍-시작하기.html",
+      "digest": "082345a4451faf172469c7f5971b13c83a1638a269e9e404ae75ceebc869645a",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/23/R-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_posts/2017-07-24-R-프로그래밍-패키지의-이해.markdown",
+      "classification": "jekyll-post-source",
+      "preserve": true,
+      "historicalRoute": "/2017/07/24/R-프로그래밍-패키지의-이해.html",
+      "digest": "b355078336515ee91c261d70e01998b9d878fb2a059d1e9238696cdfb2d62d4b",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/24/R-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%A8%ED%82%A4%EC%A7%80%EC%9D%98-%EC%9D%B4%ED%95%B4.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_posts/2017-07-25-R-프로그래밍-데이터-프레임.markdown",
+      "classification": "jekyll-post-source",
+      "preserve": true,
+      "historicalRoute": "/2017/07/25/R-프로그래밍-데이터-프레임.html",
+      "digest": "97a592ce22cf9fb31ba441872a3d4de0187084954b18dd7d133117fd2cbfa9e1",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/25/R-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_posts/2017-08-01-Android-Kotlin-프로그래밍-Kotlin?!.markdown",
+      "classification": "jekyll-post-source",
+      "preserve": true,
+      "historicalRoute": "/2017/08/01/Android-Kotlin-프로그래밍-Kotlin?!.html",
+      "digest": "de5663fc608c754dc93db978a2c25e1f238edca63da94152ef8b99f4054476a2",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/08/01/Android-Kotlin-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-Kotlin%3F!.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_posts/2017-08-03-Android-Kotlin-프로그래밍-Hello-World.markdown",
+      "classification": "jekyll-post-source",
+      "preserve": true,
+      "historicalRoute": "/2017/08/03/Android-Kotlin-프로그래밍-Hello-World.html",
+      "digest": "3b210d55e7053fd00d03be6ce16bc2389f4213fcf4d06600967791c8256c484a",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/08/03/Android-Kotlin-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-Hello-World.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_sass/_base.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "7ce5a2714bf4de1fc282fd0e8a64c9acbf605693587f6a30c46ccefb30a014a0",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_buttons.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "c980351168469e596d459932f716a883b48c3597a638be91367dc51fc521316c",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_cards.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "06435f456cd02047b57b83441009c31abcf69926d400082c5cf789a2dd33b769",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_forms.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "2f017399183b1098fec5cec32201bdb0135aed2cd6d2fd703493f3fd9ef82df5",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_grid.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "2d5281ce87ba218166b4d9a107f2ba06fdb5ee434461830dd56e70e1d8f97948",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_links.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "18170c4c337b1e121b921792d30a25f14cb7df119edf8c9b32ee9cdca6b6388e",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_lists.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "56827974522bc1c38124943481f2f49ab6565eb1729d0a6c30545e94fcb63aec",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_misc.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "53108291e6b019cc6bb58029a026de810b8aef1fb5af9ddbd5cda50a0ee1844c",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_site.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "9a5839b84e0abaf51e5faef9cdb9ae27a0e48324d7b42daad670e1c98fda0bcc",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_syntax-highlighting.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "cf0b0e2d5b2eba1fdc07767726e9e046099d3e191cd674c58e5750659e27b74a",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_top.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "f5a1ce3fb1dbb09f3e5b43450eaa61dae645f6a43fca880e1eb19dd9b81b9ff6",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_typography.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "76474e34b874e1b92f2b48b7af75654ebdcab378b5872aaa3edcd6cbc5e1fb6a",
+      "preDeletion": null
+    },
+    {
+      "path": "_sass/_util.scss",
+      "classification": "jekyll-style-source",
+      "preserve": true,
+      "historicalRoute": null,
+      "digest": "6fe29693da0640bfb70f4aece4e5536e44891bf24101f136b09ec2d940d9115d",
+      "preDeletion": null
+    },
+    {
+      "path": "_site/2017/07/13/KBG's-Git-Blog-Open.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/2017/07/13/KBG's-Git-Blog-Open.html",
+      "digest": "179a2c0fb6229e9be5838d21ac46c5e3e6f4af5ccde85ef31892f34c5696708d",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/13/KBG's-Git-Blog-Open.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/2017/07/23/R-프로그래밍-시작하기.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/2017/07/23/R-프로그래밍-시작하기.html",
+      "digest": "aaceca1ba0e4b6162dd093a28b27ad300ded888800b9d734b2928acdece934c6",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/23/R-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/2017/07/24/R-프로그래밍-패키지의-이해.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/2017/07/24/R-프로그래밍-패키지의-이해.html",
+      "digest": "435cffa4f14e4900f0da2e9eb20ab4b2a05ac7fa1e3530de55f0a79d9ca9c301",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/24/R-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%A8%ED%82%A4%EC%A7%80%EC%9D%98-%EC%9D%B4%ED%95%B4.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/2017/07/25/R-프로그래밍-데이터-프레임.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/2017/07/25/R-프로그래밍-데이터-프레임.html",
+      "digest": "d833b7421a3e88a440fad4242996f3bb094156cbe2217a015ee4cfc5eac1f8f8",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/07/25/R-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%8D%B0%EC%9D%B4%ED%84%B0-%ED%94%84%EB%A0%88%EC%9E%84.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/2017/08/01/Android-Kotlin-프로그래밍-Kotlin-!.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/2017/08/01/Android-Kotlin-프로그래밍-Kotlin-!.html",
+      "digest": "5796dadbe5362e780b771972d025399fc44bc8d4e98412b5c1e6673d060e9498",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/08/01/Android-Kotlin-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-Kotlin-!.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/2017/08/03/Android-Kotlin-프로그래밍-Hello-World.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/2017/08/03/Android-Kotlin-프로그래밍-Hello-World.html",
+      "digest": "6d02818cf6c0165593b5767929655d81ee95f46d836afa477fd7b7933c2a6d80",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/2017/08/03/Android-Kotlin-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-Hello-World.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/LICENSE",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/LICENSE",
+      "digest": "4726943598caa323e686fae9baf80b8da2eddbca327e66562e78262c52943394",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/LICENSE",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/README.md",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/README.md",
+      "digest": "bb59bc8d2c55273799ed9be4f84d9c86ae012aba6630ac92961986876b63a883",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/README.md",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/headshot.jpg",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/headshot.jpg",
+      "digest": "0444375fc5e06cef7bbd2583993caa5034514a31b9f2dadedd2526c2768bb9df",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/headshot.jpg",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/hero.jpg",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/hero.jpg",
+      "digest": "3f345f5ffb01dba7043f261f8217c9f7f0f94619290935fba29d5c0eb111fe53",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/hero.jpg",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/home.svg",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/home.svg",
+      "digest": "a23eefbcb7dea717ce917f46c8815cf1b3bd6999af42a83bd918e4982e3a9f78",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/home.svg",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/lookar.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/lookar.png",
+      "digest": "186f468b48bfedc1f6d4982df1a8953415e169741fb316724076ba3c8c0de830",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/lookar.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/VOT.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/VOT.png",
+      "digest": "a59eeebb0ee8bf93579ca0f543b11ef14060005f5b0a4d66501fcd2b91a14023",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/VOT.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/VOT_view.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/VOT_view.png",
+      "digest": "b0ab7227ba61ccd131171dcd35afd80a6d7242e371f0738774bfbcf585ddf27f",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/VOT_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/ardrumoid.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/ardrumoid.png",
+      "digest": "8221ce2421a6bcdc72f41a865db54c5d8cf5cb56bc25e2ebe34611db8fd02a18",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/ardrumoid.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/foroom.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/foroom.png",
+      "digest": "7c7bd96055af36db462a5b2b72229b5f37ff2d5eb14282081a40a79edbf908ab",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/foroom.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/foroom_view.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/foroom_view.png",
+      "digest": "67181b33168d3c1e5dc96bb97ce90249be8be6790a7cc8e12934155947635bfc",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/foroom_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/lookar.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/lookar.png",
+      "digest": "186f468b48bfedc1f6d4982df1a8953415e169741fb316724076ba3c8c0de830",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/lookar.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/lookar_view.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/lookar_view.png",
+      "digest": "81c9744abed3d4ea751892dac29a5e6754d0399ec6a1376f992a77da5c4b4fc4",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/lookar_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/recipedia.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/recipedia.png",
+      "digest": "aab6c6917219d32978bcc7b32b585f1e22698a3f59a29041ff3c2970c64dd436",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/recipedia.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/portfolio/recipedia_view.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/portfolio/recipedia_view.png",
+      "digest": "5515e0e2336da87a73ffb02762b95ac42e9aa5aae03fdb8a461e65ad5dc028ae",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/recipedia_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/profile.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/profile.png",
+      "digest": "ca2590c21394071cf78280d3fc49f7796cf9ee6f34f3d30393e9249022a83122",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/profile.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/profile2.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/profile2.png",
+      "digest": "90b71db9f4246c6941e6048e471ef413bbf4ae02fa183f7c86868dd816fd7fd6",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/profile2.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/profile3.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/profile3.png",
+      "digest": "2d4b52acfe3d944a7f4a6c48f0027cf9700523a05180e02d7f1402a94206743f",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/profile3.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/project/VOT.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/project/VOT.png",
+      "digest": "b397bd3e4e0283eb02631549f0436d6e2663561078c3a41f3fe5580b189d0dca",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/project/VOT.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/project/ardrumoid.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/project/ardrumoid.png",
+      "digest": "16dbe04078432a8c0a642782359557da46cbad5be079306bb3eedad30f0b1d1b",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/project/ardrumoid.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/project/foroom.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/project/foroom.png",
+      "digest": "6ef7570bf057959febc9061e7f356c79be2f4b4f783c8664d7ed9c3fcfce4886",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/project/foroom.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/recipedia.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/recipedia.png",
+      "digest": "85ab600592b46501dbb4f3f78aea02a3b566e75c0442a93e42e9da1887c8dcd1",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/recipedia.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/sc1.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/sc1.png",
+      "digest": "b96548143cb035a5c8f8bd43da381dfb6f97189e4fd2144eb07810dfe78d4a9f",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/sc1.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/assets/t_logo.png",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/assets/t_logo.png",
+      "digest": "e9d0369877c031fab1e5a6b869746ca3a9e2d8a7aea2ac76c6f889c1268f2496",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/t_logo.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/bootstrap.min.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/bootstrap.min.css",
+      "digest": "f75e846cc83bd11432f4b1e21a45f31bc85283d11d372f7b19accd1bf6a2635c",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/bootstrap.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/circle.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/circle.css",
+      "digest": "1a7f4890f9e93f2f93b918b0f4b7938ed1cbe8f65ef31075a98e4ac3418ccfd5",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/circle.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/font-awesome.min.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/font-awesome.min.css",
+      "digest": "936ffccdc35bc55221e669d0e76034af76ba8c080c1b1149144dbbd3b5311829",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/font-awesome.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/freelancer.min.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/freelancer.min.css",
+      "digest": "ea15f1404ff28e10e6dff085cba3d8b668877f02b4be89e27f4e87e5504a940d",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/freelancer.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/jquery.easy-pie-chart.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/jquery.easy-pie-chart.css",
+      "digest": "2588df1cccc4e3d65334f2fe09456f7944b5ef22a67b7bf1ff0eb6e9e7025937",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/jquery.easy-pie-chart.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/ladda-themeless.min.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/ladda-themeless.min.css",
+      "digest": "4e322dae5c80d26305f47e0556c5fe983325a076c14c005ebe0367b9da4b5305",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/ladda-themeless.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/main.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/main.css",
+      "digest": "553ba61b7bc709399c65f731a291de53e8ac7a6b78d82054feaa28142db5d634",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/main.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/css/reset.css",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/css/reset.css",
+      "digest": "4cdf344a243f2b32546ed184ddcbfc63d0cfc8be0fc91e9ecb87227e7a550f4a",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/reset.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/feed.xml",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/feed.xml",
+      "digest": "7e0f65b94885954824e9e0d814864b6738bad85b382073c5d1b50ad71a27dc86",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/feed.xml",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/history/index.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/history/",
+      "digest": "8bcc4661245bd47a1c4eb36024c8f24dea44f22b57b7cbfb8d7f8f8faff145c6",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/history/",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/index.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/",
+      "digest": "4b97f94675e61f191fed0d9f36278ce6be82371b9551390045485896a948a6c9",
+      "preDeletion": {
+        "status": 200,
+        "finalUrl": "https://k4771kim.github.io/",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/js/contact_me.js",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/js/contact_me.js",
+      "digest": "fc2553830937696270d78b73412983e35aa47ad946e6374c411cc641d9dd6164",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/contact_me.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/js/freelancer.js",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/js/freelancer.js",
+      "digest": "c92b9906f256dad10f78915717bd17cbaf7390f50046f79d379ff7eee3689475",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/freelancer.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/js/freelancer.min.js",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/js/freelancer.min.js",
+      "digest": "2cf0358c48063bad00e0054e90ac116cbc375e9b0218eb62873f438302bf22bc",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/freelancer.min.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/js/jqBootstrapValidation.js",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/js/jqBootstrapValidation.js",
+      "digest": "7259276218ed08d64420b19a266c7f89229a6667d8007d4dcc8dcf52a2de594b",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/jqBootstrapValidation.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/js/jquery.easy-pie-chart.js",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/js/jquery.easy-pie-chart.js",
+      "digest": "c3923fb7030cb33cb03402c3e14e81298b1ec0a7b36e2f931b517ec1781e36cb",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/jquery.easy-pie-chart.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/js/mixitup.min.js",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/js/mixitup.min.js",
+      "digest": "ea0216b84d3105171ff80d08cd291b9820d51c4729eb8e8bcae4e9b11adde85b",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/mixitup.min.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/js/progress-circle.js",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/js/progress-circle.js",
+      "digest": "fc2347a42ba1f50acd94f4a133e3e39588250c4853a4ea56dfbefb993de7f7eb",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/progress-circle.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/mail/contact_me.php",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/mail/contact_me.php",
+      "digest": "20e460b6bf25738500fe7ba0ebd834e2c6ec67e7fafd327f87a7ecc29f63602c",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/mail/contact_me.php",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/pi.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/pi.html",
+      "digest": "3a6e8941e00c9d5f3b65eb7d42dca6d698c75950df985225c2a9687d51dfbea0",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/pi.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "_site/portfolio.html",
+      "classification": "generated-site",
+      "preserve": false,
+      "historicalRoute": "/portfolio.html",
+      "digest": "9c2aa3efe25fb76626644adb6a2f711437833283ccb7319bfe22bdbe04b5e559",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/portfolio.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/headshot.jpg",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/headshot.jpg",
+      "digest": "0444375fc5e06cef7bbd2583993caa5034514a31b9f2dadedd2526c2768bb9df",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/headshot.jpg",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/hero.jpg",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/hero.jpg",
+      "digest": "3f345f5ffb01dba7043f261f8217c9f7f0f94619290935fba29d5c0eb111fe53",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/hero.jpg",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/home.svg",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/home.svg",
+      "digest": "a23eefbcb7dea717ce917f46c8815cf1b3bd6999af42a83bd918e4982e3a9f78",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/home.svg",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/lookar.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/lookar.png",
+      "digest": "186f468b48bfedc1f6d4982df1a8953415e169741fb316724076ba3c8c0de830",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/lookar.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/VOT.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/VOT.png",
+      "digest": "a59eeebb0ee8bf93579ca0f543b11ef14060005f5b0a4d66501fcd2b91a14023",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/VOT.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/VOT_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/VOT_view.png",
+      "digest": "b0ab7227ba61ccd131171dcd35afd80a6d7242e371f0738774bfbcf585ddf27f",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/VOT_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/andante.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/andante.png",
+      "digest": "89f9b4804a280416c1b168c49dc3dfa8bce268a4582402f69500f58912e6dfa6",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/andante.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/andante_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/andante_view.png",
+      "digest": "4b4abaa37799d5002b7c3c6d9c53615be04727895c26f2544202fee4ef9ce9e2",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/andante_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/ardrumoid.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/ardrumoid.png",
+      "digest": "8221ce2421a6bcdc72f41a865db54c5d8cf5cb56bc25e2ebe34611db8fd02a18",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/ardrumoid.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/boolio.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/boolio.png",
+      "digest": "7f102e4ff30b70305e4069b8a6c66075b033908011f42daebb7384c5e9253463",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/boolio.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/boolio_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/boolio_view.png",
+      "digest": "1007a155203558e662c3dbf3f47c371466a18e9dcb97920685a2606feecdbf5e",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/boolio_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/dionysign.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/dionysign.png",
+      "digest": "53253e6452f4e7fc485b78d28356cf651ce7779224455a8061d004a74a059091",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/dionysign.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/dionysign_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/dionysign_view.png",
+      "digest": "a6be5c8a86e50d3656e0fc8c621ff96aac745065b306c8557eac65effbcd7ccb",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/dionysign_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/elice.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/elice.png",
+      "digest": "dd7a731bbdec57aebbb6bd352cf21ddbbc5b1d15567b0ab760208a62fabb35d5",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/elice.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/elice_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/elice_view.png",
+      "digest": "10bd3fffa470800289dc6db1675d9b34e1c2ff5fdc9effb8cea6288c94fd4bb3",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/elice_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/foroom.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/foroom.png",
+      "digest": "7c7bd96055af36db462a5b2b72229b5f37ff2d5eb14282081a40a79edbf908ab",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/foroom.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/foroom_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/foroom_view.png",
+      "digest": "67181b33168d3c1e5dc96bb97ce90249be8be6790a7cc8e12934155947635bfc",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/foroom_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/lookar.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/lookar.png",
+      "digest": "186f468b48bfedc1f6d4982df1a8953415e169741fb316724076ba3c8c0de830",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/lookar.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/lookar_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/lookar_view.png",
+      "digest": "81c9744abed3d4ea751892dac29a5e6754d0399ec6a1376f992a77da5c4b4fc4",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/lookar_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/madlen.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/madlen.png",
+      "digest": "4e6de0188ca0ea441bc465a9c394ae9e9dbf5b9ca949138dcebedab23faf5be8",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/madlen.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/madlen_view.jpg",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/madlen_view.jpg",
+      "digest": "c182d73da20b2d5e4ad1dc37c278f64ef85d48d3b051678629b67e55f3b5d629",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/madlen_view.jpg",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/marketvilliage.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/marketvilliage.png",
+      "digest": "e21bb4da4b32de6c5294d018e8ed22f38180072a46de933942c69ea611fb488e",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/marketvilliage.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/marketvilliage_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/marketvilliage_view.png",
+      "digest": "a88eff8e7402afb56f3bcb288b860f03fe87ec8518e64ccf1850e5abeab01fa2",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/marketvilliage_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/recipedia.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/recipedia.png",
+      "digest": "aab6c6917219d32978bcc7b32b585f1e22698a3f59a29041ff3c2970c64dd436",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/recipedia.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/portfolio/recipedia_view.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/portfolio/recipedia_view.png",
+      "digest": "5515e0e2336da87a73ffb02762b95ac42e9aa5aae03fdb8a461e65ad5dc028ae",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/portfolio/recipedia_view.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/profile.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/profile.png",
+      "digest": "ca2590c21394071cf78280d3fc49f7796cf9ee6f34f3d30393e9249022a83122",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/profile.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/profile2.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/profile2.png",
+      "digest": "90b71db9f4246c6941e6048e471ef413bbf4ae02fa183f7c86868dd816fd7fd6",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/profile2.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/profile3.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/profile3.png",
+      "digest": "2d4b52acfe3d944a7f4a6c48f0027cf9700523a05180e02d7f1402a94206743f",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/profile3.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/profile4.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/profile4.png",
+      "digest": "68987ed4dc72b0ed172439a3b27e59f4ebe8eec8ab3b6ce26a1424e2e76d27da",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/profile4.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/project/VOT.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/project/VOT.png",
+      "digest": "b397bd3e4e0283eb02631549f0436d6e2663561078c3a41f3fe5580b189d0dca",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/project/VOT.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/project/ardrumoid.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/project/ardrumoid.png",
+      "digest": "16dbe04078432a8c0a642782359557da46cbad5be079306bb3eedad30f0b1d1b",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/project/ardrumoid.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/project/foroom.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/project/foroom.png",
+      "digest": "6ef7570bf057959febc9061e7f356c79be2f4b4f783c8664d7ed9c3fcfce4886",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/project/foroom.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/recipedia.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/recipedia.png",
+      "digest": "85ab600592b46501dbb4f3f78aea02a3b566e75c0442a93e42e9da1887c8dcd1",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/recipedia.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/sc1.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/sc1.png",
+      "digest": "b96548143cb035a5c8f8bd43da381dfb6f97189e4fd2144eb07810dfe78d4a9f",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/sc1.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "assets/t_logo.png",
+      "classification": "legacy-asset",
+      "preserve": true,
+      "historicalRoute": "/assets/t_logo.png",
+      "digest": "e9d0369877c031fab1e5a6b869746ca3a9e2d8a7aea2ac76c6f889c1268f2496",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/assets/t_logo.png",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/bootstrap.min.css",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/bootstrap.min.css",
+      "digest": "f75e846cc83bd11432f4b1e21a45f31bc85283d11d372f7b19accd1bf6a2635c",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/bootstrap.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/circle.css",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/circle.css",
+      "digest": "1a7f4890f9e93f2f93b918b0f4b7938ed1cbe8f65ef31075a98e4ac3418ccfd5",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/circle.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/font-awesome.min.css",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/font-awesome.min.css",
+      "digest": "936ffccdc35bc55221e669d0e76034af76ba8c080c1b1149144dbbd3b5311829",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/font-awesome.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/freelancer.min.css",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/freelancer.min.css",
+      "digest": "491a2268e07ea5627a5963de80d63526bcd6be7a553f29978740629fd39f6758",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/freelancer.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/jquery.easy-pie-chart.css",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/jquery.easy-pie-chart.css",
+      "digest": "2588df1cccc4e3d65334f2fe09456f7944b5ef22a67b7bf1ff0eb6e9e7025937",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/jquery.easy-pie-chart.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/ladda-themeless.min.css",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/ladda-themeless.min.css",
+      "digest": "4e322dae5c80d26305f47e0556c5fe983325a076c14c005ebe0367b9da4b5305",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/ladda-themeless.min.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/main.scss",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/main.scss",
+      "digest": "c6fdc327feaffd37f1c033f2d790f8196f109665d6ec47271dc71d8d14f40105",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/main.scss",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "css/reset.css",
+      "classification": "legacy-style",
+      "preserve": true,
+      "historicalRoute": "/css/reset.css",
+      "digest": "4cdf344a243f2b32546ed184ddcbfc63d0cfc8be0fc91e9ecb87227e7a550f4a",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/css/reset.css",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "feed.xml",
+      "classification": "legacy-entry",
+      "preserve": true,
+      "historicalRoute": "/feed.xml",
+      "digest": "4ca91a23995d127dc67ac25700d3962f1391825fcca22691607b5f025658987f",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/feed.xml",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "history.md",
+      "classification": "jekyll-page-source",
+      "preserve": true,
+      "historicalRoute": "/history/",
+      "digest": "3e3e065b5f98f45512c5dfef7a519358ba4dc79034090938755b4438067981d5",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/history/",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "index.html",
+      "classification": "legacy-entry",
+      "preserve": true,
+      "historicalRoute": "/",
+      "digest": "e1ac6438e19e32057bcf0de5f9e7f41651a5d1f9ab2b2a8a1b48a27b452af246",
+      "preDeletion": {
+        "status": 200,
+        "finalUrl": "https://k4771kim.github.io/",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "js/contact_me.js",
+      "classification": "legacy-script",
+      "preserve": true,
+      "historicalRoute": "/js/contact_me.js",
+      "digest": "fc2553830937696270d78b73412983e35aa47ad946e6374c411cc641d9dd6164",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/contact_me.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "js/freelancer.js",
+      "classification": "legacy-script",
+      "preserve": true,
+      "historicalRoute": "/js/freelancer.js",
+      "digest": "c92b9906f256dad10f78915717bd17cbaf7390f50046f79d379ff7eee3689475",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/freelancer.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "js/freelancer.min.js",
+      "classification": "legacy-script",
+      "preserve": true,
+      "historicalRoute": "/js/freelancer.min.js",
+      "digest": "2cf0358c48063bad00e0054e90ac116cbc375e9b0218eb62873f438302bf22bc",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/freelancer.min.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "js/jqBootstrapValidation.js",
+      "classification": "legacy-script",
+      "preserve": true,
+      "historicalRoute": "/js/jqBootstrapValidation.js",
+      "digest": "7259276218ed08d64420b19a266c7f89229a6667d8007d4dcc8dcf52a2de594b",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/jqBootstrapValidation.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "js/jquery.easy-pie-chart.js",
+      "classification": "legacy-script",
+      "preserve": true,
+      "historicalRoute": "/js/jquery.easy-pie-chart.js",
+      "digest": "c3923fb7030cb33cb03402c3e14e81298b1ec0a7b36e2f931b517ec1781e36cb",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/jquery.easy-pie-chart.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "js/mixitup.min.js",
+      "classification": "legacy-script",
+      "preserve": true,
+      "historicalRoute": "/js/mixitup.min.js",
+      "digest": "ea0216b84d3105171ff80d08cd291b9820d51c4729eb8e8bcae4e9b11adde85b",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/mixitup.min.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "js/progress-circle.js",
+      "classification": "legacy-script",
+      "preserve": true,
+      "historicalRoute": "/js/progress-circle.js",
+      "digest": "fc2347a42ba1f50acd94f4a133e3e39588250c4853a4ea56dfbefb993de7f7eb",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/js/progress-circle.js",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "mail/contact_me.php",
+      "classification": "php-handler",
+      "preserve": false,
+      "historicalRoute": "/mail/contact_me.php",
+      "digest": "20e460b6bf25738500fe7ba0ebd834e2c6ec67e7fafd327f87a7ecc29f63602c",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/mail/contact_me.php",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "pi.html",
+      "classification": "legacy-entry",
+      "preserve": true,
+      "historicalRoute": "/pi.html",
+      "digest": "3a6e8941e00c9d5f3b65eb7d42dca6d698c75950df985225c2a9687d51dfbea0",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/pi.html",
+        "contentType": "text/html"
+      }
+    },
+    {
+      "path": "portfolio.html",
+      "classification": "legacy-entry",
+      "preserve": true,
+      "historicalRoute": "/portfolio.html",
+      "digest": "910a7faa87682027bbfd766b1a9872d5b23ba854a9e774de891b892dc1b993b1",
+      "preDeletion": {
+        "status": 404,
+        "finalUrl": "https://k4771kim.github.io/portfolio.html",
+        "contentType": "text/html"
+      }
+    }
+  ]
+}

@@ -10,13 +10,15 @@
     "check": "astro check",
     "test:runner": "node --test scripts/run-portfolio-ci.test.mjs",
     "test:content": "node --test scripts/verify-content-boundary.test.mjs",
+    "test:legacy": "node --test scripts/verify-legacy-boundary.test.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "verify:bodygraph": "node scripts/verify-bodygraph-build.mjs",
     "verify:content": "node scripts/verify-content-boundary.mjs",
+    "verify:legacy": "node scripts/verify-legacy-boundary.mjs verify-static --manifest docs/legacy-preservation.json",
     "verify:portfolio": "node scripts/verify-portfolio.mjs",
     "verify:ci": "node scripts/run-portfolio-ci.mjs",
-    "quality": "npm run check && npm run test:runner && npm run build && npm run verify:content && npm run test:content && npm run verify:bodygraph && npm run verify:ci",
+    "quality": "npm run check && npm run test:runner && npm run build && npm run verify:content && npm run test:content && npm run verify:legacy && npm run test:legacy && npm run verify:bodygraph && npm run verify:ci",
     "astro": "astro"
   },
   "dependencies": {
