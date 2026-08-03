@@ -1,7 +1,6 @@
 import { spawn } from 'node:child_process';
 import { randomUUID } from 'node:crypto';
 import { once } from 'node:events';
-import { rm, writeFile } from 'node:fs/promises';
 import process from 'node:process';
 import { setTimeout as delay } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
@@ -46,7 +45,7 @@ async function stopProcessTree(child, timeoutMs) {
 
 async function waitForHttp(
   url,
-  expectedBody,
+  expectedToken,
   preview,
   getSpawnError,
   timeoutMs,
@@ -63,8 +62,11 @@ async function waitForHttp(
 
     try {
       const response = await fetch(url, { signal: AbortSignal.timeout(1_000) });
-      const body = await response.text();
-      if (response.ok && body === expectedBody) return;
+      await response.body?.cancel();
+      if (
+        response.ok
+        && response.headers.get('x-portfolio-readiness') === expectedToken
+      ) return;
     } catch {
       // The preview process is still starting.
     }
@@ -90,23 +92,23 @@ export async function runPreviewVerification({
   previewCommand,
   verificationCommand,
   url,
-  readinessUrl = url,
-  expectedReadinessBody,
+  expectedReadinessToken,
   cwd = process.cwd(),
   env = process.env,
+  previewEnv = env,
   stdio = 'inherit',
   readyTimeoutMs = DEFAULT_READY_TIMEOUT_MS,
   readyIntervalMs = DEFAULT_READY_INTERVAL_MS,
   stopTimeoutMs = DEFAULT_STOP_TIMEOUT_MS,
 }) {
-  if (typeof expectedReadinessBody !== 'string') {
-    throw new TypeError('expectedReadinessBody must be a string');
+  if (typeof expectedReadinessToken !== 'string' || !expectedReadinessToken) {
+    throw new TypeError('expectedReadinessToken must be a non-empty string');
   }
 
   const [previewExecutable, ...previewArgs] = previewCommand;
   const preview = spawn(previewExecutable, previewArgs, {
     cwd,
-    env,
+    env: previewEnv,
     stdio,
     detached: process.platform !== 'win32',
   });
@@ -120,8 +122,8 @@ export async function runPreviewVerification({
 
   try {
     await waitForHttp(
-      readinessUrl,
-      expectedReadinessBody,
+      url,
+      expectedReadinessToken,
       preview,
       () => previewSpawnError,
       readyTimeoutMs,
@@ -151,35 +153,28 @@ async function main() {
   const url = `http://${host}:${port}`;
   const npmExecutable = process.platform === 'win32' ? 'npm.cmd' : 'npm';
   const verificationScript = fileURLToPath(new URL('./verify-portfolio.mjs', import.meta.url));
-  const readinessFileName = `portfolio-readiness-${randomUUID()}.txt`;
-  const readinessBody = randomUUID();
-  const readinessFile = fileURLToPath(
-    new URL(`../dist/${readinessFileName}`, import.meta.url),
-  );
+  const readinessToken = randomUUID();
+  const result = await runPreviewVerification({
+    previewCommand: [
+      npmExecutable,
+      'run',
+      'preview',
+      '--',
+      '--host',
+      host,
+      '--port',
+      port,
+    ],
+    verificationCommand: [process.execPath, verificationScript],
+    url,
+    expectedReadinessToken: readinessToken,
+    previewEnv: {
+      ...process.env,
+      PORTFOLIO_PREVIEW_READINESS_TOKEN: readinessToken,
+    },
+  });
 
-  await writeFile(readinessFile, readinessBody, { flag: 'wx' });
-  try {
-    const result = await runPreviewVerification({
-      previewCommand: [
-        npmExecutable,
-        'run',
-        'preview',
-        '--',
-        '--host',
-        host,
-        '--port',
-        port,
-      ],
-      verificationCommand: [process.execPath, verificationScript],
-      url,
-      readinessUrl: new URL(readinessFileName, `${url}/`).href,
-      expectedReadinessBody: readinessBody,
-    });
-
-    process.exitCode = result.exitCode;
-  } finally {
-    await rm(readinessFile, { force: true });
-  }
+  process.exitCode = result.exitCode;
 }
 
 const isDirectExecution = process.argv[1]

@@ -10,7 +10,10 @@ const healthyServer = `
   const http = require('node:http');
   const port = Number(process.argv[1]);
   http.createServer((request, response) => {
-    response.writeHead(200, { 'content-type': 'text/plain' });
+    const headers = { 'content-type': 'text/plain' };
+    const readinessToken = process.env.PORTFOLIO_PREVIEW_READINESS_TOKEN;
+    if (readinessToken) headers['x-portfolio-readiness'] = readinessToken;
+    response.writeHead(200, headers);
     response.end('ready');
   }).listen(port, '127.0.0.1');
 `;
@@ -48,7 +51,8 @@ async function runTestPair({ serverCode = healthyServer, verificationExitCode = 
     previewCommand: [process.execPath, '-e', serverCode, String(port)],
     verificationCommand: [process.execPath, '-e', `process.exit(${verificationExitCode})`],
     url,
-    expectedReadinessBody: 'ready',
+    expectedReadinessToken: 'test-token',
+    previewEnv: { ...process.env, PORTFOLIO_PREVIEW_READINESS_TOKEN: 'test-token' },
     stdio: 'ignore',
     readyTimeoutMs: 1_500,
     readyIntervalMs: 25,
@@ -78,7 +82,7 @@ test('times out readiness and terminates the preview process', async () => {
       previewCommand: [process.execPath, '-e', 'setInterval(() => {}, 1000)'],
       verificationCommand: [process.execPath, '-e', 'process.exit(0)'],
       url,
-      expectedReadinessBody: 'ready',
+      expectedReadinessToken: 'test-token',
       stdio: 'ignore',
       readyTimeoutMs: 100,
       readyIntervalMs: 20,
@@ -92,10 +96,10 @@ test('times out readiness and terminates the preview process', async () => {
   );
 });
 
-test('rejects foreign readiness when the preview serves on another port', async () => {
+test('rejects matching content from a preview without the current process token', async () => {
   const foreignServer = createHttpServer((_, response) => {
     response.writeHead(200, { 'content-type': 'text/plain', connection: 'close' });
-    response.end('foreign');
+    response.end('ready');
   });
   foreignServer.listen(0, '127.0.0.1');
   await onceListening(foreignServer);
@@ -108,7 +112,11 @@ test('rejects foreign readiness when the preview serves on another port', async 
         previewCommand: [process.execPath, '-e', healthyServer, '0'],
         verificationCommand: [process.execPath, '-e', 'process.exit(0)'],
         url,
-        expectedReadinessBody: 'ready',
+        expectedReadinessToken: 'current-token',
+        previewEnv: {
+          ...process.env,
+          PORTFOLIO_PREVIEW_READINESS_TOKEN: 'current-token',
+        },
         stdio: 'ignore',
         readyTimeoutMs: 500,
         readyIntervalMs: 20,
@@ -122,7 +130,7 @@ test('rejects foreign readiness when the preview serves on another port', async 
     );
 
     const response = await fetch(url);
-    assert.equal(await response.text(), 'foreign');
+    assert.equal(await response.text(), 'ready');
   } finally {
     await new Promise((resolve, reject) => {
       foreignServer.close((error) => error ? reject(error) : resolve());

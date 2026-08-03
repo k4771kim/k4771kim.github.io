@@ -3,6 +3,9 @@ import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 
 const projectRoot = decodeURIComponent(new URL(".", import.meta.url).pathname);
+const runtimeProcess = Reflect.get(globalThis, "process");
+const previewReadinessToken =
+  runtimeProcess?.env?.PORTFOLIO_PREVIEW_READINESS_TOKEN;
 
 /** @param {string} id */
 function normalizeModuleId(id) {
@@ -58,6 +61,11 @@ function portfolioClientManifest() {
 export default defineConfig({
   site: 'https://k4771kim.github.io',
   integrations: [react()],
+  server: {
+    headers: previewReadinessToken
+      ? { 'x-portfolio-readiness': previewReadinessToken }
+      : undefined,
+  },
   vite: {
     preview: {
       strictPort: true,
