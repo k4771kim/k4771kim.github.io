@@ -1,24 +1,34 @@
 {
   "version": 1,
   "activeProjectFiles": [
-    "01-foroom.md",
-    "09-elicemobile.md",
     "11-boolio.md",
     "12-allatte.md",
     "14-humandesignhub.md",
-    "15-linchpin.md"
+    "15-linchpin.md",
+    "16-flowmate.md",
+    "17-insway.md"
   ],
   "archivedProjectFiles": [
+    "01-foroom.md",
     "02-voiceofthousands.md",
     "03-ardrumoid.md",
     "04-recipedia.md",
     "05-lookar.md",
     "06-andante.md",
     "07-madlen.md",
+    "09-elicemobile.md",
     "10-marketvillage.md",
     "13-sajuhub.md"
   ],
   "projects": {
+    "content/projects/01-foroom.md": {
+      "title": "포룸 인테리어",
+      "featured": false,
+      "images": [
+        "assets/portfolio/foroom.png",
+        "assets/portfolio/foroom_view.png"
+      ]
+    },
     "content/projects/02-voiceofthousands.md": {
       "title": "천 개의 목소리",
       "featured": false,
@@ -66,6 +76,14 @@
         "assets/portfolio/madlen_view.jpg"
       ]
     },
+    "content/projects/09-elicemobile.md": {
+      "title": "Elice Mobile",
+      "featured": false,
+      "images": [
+        "assets/portfolio/elice.png",
+        "assets/portfolio/elice_view.png"
+      ]
+    },
     "content/projects/10-marketvillage.md": {
       "title": "Market Village",
       "featured": false,
@@ -98,6 +116,18 @@
     ],
     "assets/portfolio/ardrumoid.png": [
       "content/projects/03-ardrumoid.md"
+    ],
+    "assets/portfolio/elice.png": [
+      "content/projects/09-elicemobile.md"
+    ],
+    "assets/portfolio/elice_view.png": [
+      "content/projects/09-elicemobile.md"
+    ],
+    "assets/portfolio/foroom.png": [
+      "content/projects/01-foroom.md"
+    ],
+    "assets/portfolio/foroom_view.png": [
+      "content/projects/01-foroom.md"
     ],
     "assets/portfolio/lookar.png": [
       "content/projects/05-lookar.md"

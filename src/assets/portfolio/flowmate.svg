@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="flowmate-title flowmate-desc">
+  <title id="flowmate-title">FlowMate</title>
+  <desc id="flowmate-desc">Form과 Flow를 연결하는 FlowMate 심볼</desc>
+  <defs>
+    <linearGradient id="flowmate-bg" x1="64" y1="48" x2="448" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#25205F"/>
+    </linearGradient>
+    <linearGradient id="flowmate-accent" x1="142" y1="128" x2="388" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="0.55" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="flowmate-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#050816" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#flowmate-bg)"/>
+  <circle cx="410" cy="92" r="78" fill="#22D3EE" opacity="0.08"/>
+  <circle cx="94" cy="420" r="112" fill="#8B5CF6" opacity="0.10"/>
+  <g filter="url(#flowmate-shadow)">
+    <rect x="112" y="104" width="208" height="276" rx="30" fill="#F8FAFC"/>
+    <rect x="144" y="146" width="112" height="14" rx="7" fill="#CBD5E1"/>
+    <rect x="144" y="184" width="144" height="44" rx="12" fill="#EEF2FF" stroke="#C4B5FD" stroke-width="4"/>
+    <rect x="144" y="250" width="144" height="44" rx="12" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="4"/>
+    <rect x="144" y="316" width="88" height="18" rx="9" fill="url(#flowmate-accent)"/>
+  </g>
+  <path d="M320 194C362 194 372 224 372 256C372 288 350 310 318 310" fill="none" stroke="url(#flowmate-accent)" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="374" cy="194" r="26" fill="#8B5CF6" stroke="#DDD6FE" stroke-width="8"/>
+  <circle cx="374" cy="318" r="26" fill="#22D3EE" stroke="#CFFAFE" stroke-width="8"/>
+</svg>

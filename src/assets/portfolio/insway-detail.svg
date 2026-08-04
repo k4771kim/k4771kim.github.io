@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="insway-detail-title insway-detail-desc">
+  <title id="insway-detail-title">InsWay platform architecture</title>
+  <desc id="insway-detail-desc">Coding Agents에서 MCP, 플랫폼 서비스, Kubernetes 배포로 이어지는 제품 개념도</desc>
+  <defs>
+    <linearGradient id="insway-detail-bg" x1="70" y1="30" x2="1140" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#061923"/>
+      <stop offset="1" stop-color="#0B3440"/>
+    </linearGradient>
+    <linearGradient id="insway-detail-accent" x1="154" y1="320" x2="1052" y2="330" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset="0.5" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="insway-detail-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#020617" flood-opacity="0.42"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#insway-detail-bg)"/>
+  <circle cx="1060" cy="110" r="210" fill="#60A5FA" opacity="0.06"/>
+  <circle cx="70" cy="620" r="240" fill="#2DD4BF" opacity="0.06"/>
+  <g font-family="Inter, Pretendard, Arial, sans-serif">
+    <text x="72" y="78" fill="#F8FAFC" font-size="32" font-weight="700">InsWay</text>
+    <rect x="206" y="46" width="196" height="42" rx="21" fill="#2DD4BF" opacity="0.15"/>
+    <text x="233" y="73" fill="#99F6E4" font-size="15" font-weight="700" letter-spacing="1.3">AGENT PLATFORM</text>
+    <text x="72" y="121" fill="#94A3B8" font-size="18">From intent to governed production</text>
+    <g filter="url(#insway-detail-shadow)">
+      <rect x="70" y="204" width="216" height="238" rx="25" fill="#0E2934" stroke="#2DD4BF" stroke-opacity="0.55"/>
+      <circle cx="178" cy="270" r="38" fill="#2DD4BF" opacity="0.16"/>
+      <polygon points="151,274 159,266 174,279 195,254 203,261 175,293" fill="#5EEAD4"/>
+      <text x="115" y="344" fill="#F8FAFC" font-size="22" font-weight="700">Coding Agents</text>
+      <text x="108" y="380" fill="#94A3B8" font-size="15">Project intent</text>
+      <text x="108" y="406" fill="#94A3B8" font-size="15">Source &amp; context</text>
+    </g>
+    <g filter="url(#insway-detail-shadow)">
+      <rect x="414" y="204" width="176" height="238" rx="25" fill="#0E2934" stroke="#22D3EE" stroke-opacity="0.6"/>
+      <rect x="463" y="242" width="78" height="58" rx="18" fill="#22D3EE" opacity="0.16"/>
+      <rect x="479" y="267" width="46" height="8" rx="4" fill="#67E8F9"/>
+      <rect x="498" y="254" width="8" height="34" rx="4" fill="#67E8F9"/>
+      <text x="476" y="344" fill="#F8FAFC" font-size="22" font-weight="700">MCP</text>
+      <text x="449" y="380" fill="#94A3B8" font-size="15">Safe contracts</text>
+      <text x="450" y="406" fill="#94A3B8" font-size="15">Auth &amp; policy</text>
+    </g>
+    <g filter="url(#insway-detail-shadow)">
+      <rect x="708" y="170" width="176" height="306" rx="25" fill="#0E2934" stroke="#38BDF8" stroke-opacity="0.58"/>
+      <text x="742" y="218" fill="#F8FAFC" font-size="20" font-weight="700">Platform</text>
+      <rect x="732" y="242" width="128" height="45" rx="13" fill="#113947"/>
+      <circle cx="753" cy="264" r="7" fill="#2DD4BF"/>
+      <text x="771" y="270" fill="#CCFBF1" font-size="14">Datasheet</text>
+      <rect x="732" y="303" width="128" height="45" rx="13" fill="#113947"/>
+      <circle cx="753" cy="325" r="7" fill="#22D3EE"/>
+      <text x="771" y="331" fill="#CFFAFE" font-size="14">Storage</text>
+      <rect x="732" y="364" width="128" height="45" rx="13" fill="#113947"/>
+      <circle cx="753" cy="386" r="7" fill="#38BDF8"/>
+      <text x="771" y="392" fill="#E0F2FE" font-size="14">Gateway</text>
+      <text x="736" y="444" fill="#94A3B8" font-size="14">Governed access</text>
+    </g>
+    <g filter="url(#insway-detail-shadow)">
+      <rect x="988" y="204" width="142" height="238" rx="25" fill="#0E2934" stroke="#60A5FA" stroke-opacity="0.62"/>
+      <path d="M1025 267L1059 245L1093 267V307L1059 329L1025 307V267Z" fill="#60A5FA" opacity="0.18" stroke="#93C5FD" stroke-width="4"/>
+      <rect x="1043" y="283" width="32" height="6" rx="3" fill="#BFDBFE"/>
+      <rect x="1056" y="270" width="6" height="32" rx="3" fill="#BFDBFE"/>
+      <text x="1012" y="367" fill="#F8FAFC" font-size="19" font-weight="700">Kubernetes</text>
+      <text x="1018" y="400" fill="#94A3B8" font-size="14">Deploy &amp; rollback</text>
+    </g>
+    <rect x="296" y="320" width="108" height="7" rx="3.5" fill="#22D3EE"/>
+    <rect x="600" y="320" width="98" height="7" rx="3.5" fill="#22D3EE"/>
+    <rect x="894" y="320" width="84" height="7" rx="3.5" fill="#22D3EE"/>
+    <polygon points="404,323 387,307 387,339" fill="#67E8F9"/>
+    <polygon points="698,323 681,307 681,339" fill="#67E8F9"/>
+    <polygon points="978,323 961,307 961,339" fill="#67E8F9"/>
+    <rect x="202" y="512" width="796" height="73" rx="24" fill="#0E2934" stroke="#155E75"/>
+    <circle cx="241" cy="549" r="11" fill="#22C55E"/>
+    <text x="269" y="556" fill="#E2E8F0" font-size="18" font-weight="650">Project workspace · permissions · runtime · deployment</text>
+  </g>
+</svg>

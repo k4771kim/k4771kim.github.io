@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="insway-title insway-desc">
+  <title id="insway-title">InsWay</title>
+  <desc id="insway-desc">Coding Agent와 플랫폼 서비스를 연결하는 InsWay 심볼</desc>
+  <defs>
+    <linearGradient id="insway-bg" x1="56" y1="52" x2="456" y2="466" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071A24"/>
+      <stop offset="1" stop-color="#0B3440"/>
+    </linearGradient>
+    <linearGradient id="insway-accent" x1="132" y1="118" x2="388" y2="400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2DD4BF"/>
+      <stop offset="0.52" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="insway-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#020617" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#insway-bg)"/>
+  <circle cx="82" cy="104" r="96" fill="#2DD4BF" opacity="0.07"/>
+  <circle cx="438" cy="410" r="112" fill="#60A5FA" opacity="0.08"/>
+  <g filter="url(#insway-shadow)">
+    <path d="M256 91L391 169V325L256 403L121 325V169L256 91Z" fill="#0F2733" stroke="url(#insway-accent)" stroke-width="12"/>
+    <path d="M187 174V325M256 174V325M325 174V325" stroke="#DDFBFA" stroke-width="26" stroke-linecap="round"/>
+    <path d="M187 252H256M256 252H325" stroke="url(#insway-accent)" stroke-width="20" stroke-linecap="round"/>
+    <circle cx="187" cy="174" r="22" fill="#2DD4BF"/>
+    <circle cx="325" cy="174" r="22" fill="#22D3EE"/>
+    <circle cx="187" cy="325" r="22" fill="#22D3EE"/>
+    <circle cx="325" cy="325" r="22" fill="#60A5FA"/>
+    <circle cx="256" cy="252" r="28" fill="#F8FAFC" stroke="#22D3EE" stroke-width="9"/>
+  </g>
+</svg>

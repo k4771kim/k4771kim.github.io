@@ -30,7 +30,7 @@ that output locally.
 - `src/content/projects/` contains exactly the six featured project records.
   `npm run verify:content` enforces their filenames, order, image ownership, and
   exclusion of archived work.
-- `archive/projects/` retains eight historical project records and their
+- `archive/projects/` retains ten historical project records and their
   exclusive assets. It is outside Astro's source and build boundaries.
 - `BodyGraphShell.tsx` reserves a stable SSR-safe region and loads the vendored
   `@hdhub/bodygraph-3d@0.1.1` package only near the viewport. The vendored tarball

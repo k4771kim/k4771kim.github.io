@@ -57,7 +57,7 @@ test('accepts the intact active and archive boundaries', async (t) => {
 
 test('rejects a missing active project', async (t) => {
   const root = await fixture(t);
-  await rm(join(root, 'src/content/projects/01-foroom.md'));
+  await rm(join(root, 'src/content/projects/16-flowmate.md'));
   assert.notEqual(verify(root).status, 0);
 });
 
@@ -71,9 +71,9 @@ test('rejects an active project with featured disabled', async (t) => {
 
 test('rejects a broken active image reference', async (t) => {
   const root = await fixture(t);
-  const path = join(root, 'src/content/projects/01-foroom.md');
+  const path = join(root, 'src/content/projects/16-flowmate.md');
   const source = await readFile(path, 'utf8');
-  await writeFile(path, source.replace('foroom.png', 'missing-foroom.png'));
+  await writeFile(path, source.replace('flowmate.svg', 'missing-flowmate.svg'));
   assert.notEqual(verify(root).status, 0);
 });
 

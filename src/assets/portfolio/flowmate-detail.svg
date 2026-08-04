@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="flowmate-detail-title flowmate-detail-desc">
+  <title id="flowmate-detail-title">FlowMate AI authoring workspace</title>
+  <desc id="flowmate-detail-desc">AI 대화, Form Builder, Flow Builder를 하나의 화면에 구성한 제품 개념도</desc>
+  <defs>
+    <linearGradient id="flowmate-detail-bg" x1="70" y1="20" x2="1130" y2="655" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#211A54"/>
+    </linearGradient>
+    <linearGradient id="flowmate-detail-accent" x1="350" y1="110" x2="1040" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B5CF6"/>
+      <stop offset="0.55" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="flowmate-detail-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#020617" flood-opacity="0.36"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="675" fill="url(#flowmate-detail-bg)"/>
+  <circle cx="1070" cy="70" r="190" fill="#22D3EE" opacity="0.06"/>
+  <circle cx="160" cy="620" r="250" fill="#8B5CF6" opacity="0.08"/>
+  <g font-family="Inter, Pretendard, Arial, sans-serif">
+    <text x="72" y="77" fill="#F8FAFC" font-size="32" font-weight="700">FlowMate</text>
+    <rect x="242" y="46" width="142" height="42" rx="21" fill="#8B5CF6" opacity="0.18"/>
+    <text x="269" y="73" fill="#C4B5FD" font-size="15" font-weight="700" letter-spacing="1.4">AI AUTHORING</text>
+    <g filter="url(#flowmate-detail-shadow)">
+      <rect x="62" y="122" width="310" height="486" rx="24" fill="#111827" stroke="#334155"/>
+      <rect x="88" y="151" width="258" height="56" rx="14" fill="#1E293B"/>
+      <circle cx="117" cy="179" r="14" fill="#8B5CF6"/>
+      <text x="144" y="185" fill="#F8FAFC" font-size="18" font-weight="650">AI Assistant</text>
+      <rect x="88" y="234" width="218" height="78" rx="16" fill="#1E293B"/>
+      <rect x="108" y="256" width="164" height="10" rx="5" fill="#64748B"/>
+      <rect x="108" y="280" width="126" height="10" rx="5" fill="#475569"/>
+      <rect x="126" y="336" width="220" height="70" rx="16" fill="#4F46E5"/>
+      <rect x="151" y="360" width="166" height="10" rx="5" fill="#E0E7FF" opacity="0.9"/>
+      <rect x="151" y="382" width="112" height="9" rx="4.5" fill="#C7D2FE" opacity="0.7"/>
+      <rect x="88" y="438" width="258" height="92" rx="16" fill="#0F172A" stroke="#334155"/>
+      <text x="110" y="472" fill="#94A3B8" font-size="15">Describe your workflow...</text>
+      <rect x="260" y="481" width="62" height="31" rx="12" fill="url(#flowmate-detail-accent)"/>
+      <text x="274" y="502" fill="#FFFFFF" font-size="13" font-weight="700">Apply</text>
+    </g>
+    <g filter="url(#flowmate-detail-shadow)">
+      <rect x="396" y="122" width="742" height="486" rx="24" fill="#F8FAFC"/>
+      <rect x="396" y="122" width="742" height="68" rx="24" fill="#FFFFFF"/>
+      <rect x="424" y="145" width="98" height="30" rx="15" fill="#EEF2FF"/>
+      <text x="447" y="165" fill="#4F46E5" font-size="14" font-weight="700">Preview</text>
+      <text x="554" y="165" fill="#64748B" font-size="14">Form</text>
+      <text x="626" y="165" fill="#64748B" font-size="14">Flow</text>
+      <text x="696" y="165" fill="#64748B" font-size="14">Data</text>
+      <text x="770" y="165" fill="#64748B" font-size="14">Check</text>
+      <rect x="988" y="143" width="122" height="35" rx="12" fill="#111827"/>
+      <text x="1017" y="166" fill="#FFFFFF" font-size="13" font-weight="700">Publish</text>
+      <rect x="426" y="218" width="312" height="352" rx="18" fill="#FFFFFF" stroke="#E2E8F0"/>
+      <text x="452" y="255" fill="#0F172A" font-size="18" font-weight="700">Request Form</text>
+      <rect x="452" y="281" width="260" height="48" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <rect x="452" y="349" width="260" height="48" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <rect x="452" y="417" width="260" height="108" rx="12" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <rect x="764" y="218" width="344" height="352" rx="18" fill="#F1F5F9" stroke="#E2E8F0"/>
+      <text x="790" y="255" fill="#0F172A" font-size="18" font-weight="700">Workflow</text>
+      <rect x="790" y="326" width="88" height="54" rx="15" fill="#FFFFFF" stroke="#8B5CF6" stroke-width="3"/>
+      <text x="815" y="359" fill="#4F46E5" font-size="14" font-weight="700">Start</text>
+      <rect x="898" y="279" width="88" height="54" rx="15" fill="#FFFFFF" stroke="#4F46E5" stroke-width="3"/>
+      <text x="921" y="312" fill="#4338CA" font-size="14" font-weight="700">Review</text>
+      <rect x="1000" y="367" width="82" height="54" rx="15" fill="#FFFFFF" stroke="#22D3EE" stroke-width="3"/>
+      <text x="1022" y="400" fill="#0891B2" font-size="14" font-weight="700">Done</text>
+      <polygon points="875,352 895,305 901,307 881,354" fill="#6366F1"/>
+      <polygon points="983,306 997,394 1003,394 989,306" fill="#6366F1"/>
+      <rect x="790" y="478" width="292" height="56" rx="15" fill="#FFFFFF"/>
+      <circle cx="818" cy="506" r="10" fill="#22C55E"/>
+      <text x="841" y="512" fill="#334155" font-size="14" font-weight="650">Form · Flow · Data connected</text>
+    </g>
+  </g>
+</svg>

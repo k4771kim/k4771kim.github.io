@@ -11,20 +11,22 @@ import { dirname, extname, isAbsolute, join, relative, resolve } from 'node:path
 import { fileURLToPath } from 'node:url';
 
 const expectedActiveProjects = {
-  '01-foroom.md': '포룸 인테리어',
-  '09-elicemobile.md': 'Elice Mobile',
   '11-boolio.md': 'Boolio',
   '12-allatte.md': 'Allatte',
   '14-humandesignhub.md': 'HDHub',
   '15-linchpin.md': 'Linchpin',
+  '16-flowmate.md': 'FlowMate',
+  '17-insway.md': 'InsWay',
 };
 const expectedArchivedProjects = [
+  '01-foroom.md',
   '02-voiceofthousands.md',
   '03-ardrumoid.md',
   '04-recipedia.md',
   '05-lookar.md',
   '06-andante.md',
   '07-madlen.md',
+  '09-elicemobile.md',
   '10-marketvillage.md',
   '13-sajuhub.md',
 ];

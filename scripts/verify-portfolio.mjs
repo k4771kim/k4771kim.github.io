@@ -11,17 +11,17 @@ const viewports = [
 ];
 const expectedCounts = {
   all: 6,
-  'AI Agent': 1,
-  Web: 2,
-  Mobile: 3,
+  'AI Agent': 3,
+  Web: 4,
+  Mobile: 1,
 };
 const expectedProjectTitles = [
   'Linchpin',
+  'FlowMate',
+  'InsWay',
   'HDHub',
   'Allatte',
   'Boolio',
-  'Elice Mobile',
-  '포룸 인테리어',
 ];
 const clientManifest = JSON.parse(
   await readFile(
@@ -592,7 +592,10 @@ try {
     await aiAgentFilter.focus();
     await aiAgentFilter.press('Enter');
     assert.equal(await aiAgentFilter.getAttribute('aria-pressed'), 'true');
-    assert.equal(await page.locator('#project-grid > div:not([hidden])').count(), 1);
+    assert.equal(
+      await page.locator('#project-grid > div:not([hidden])').count(),
+      expectedCounts['AI Agent'],
+    );
 
     await page.locator('#projects').scrollIntoViewIfNeeded();
     await page.screenshot({

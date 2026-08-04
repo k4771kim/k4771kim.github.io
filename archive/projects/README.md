@@ -1,6 +1,6 @@
 # Archived portfolio projects
 
-This directory keeps eight nonfeatured project records outside Astro's active
+This directory keeps ten nonfeatured project records outside Astro's active
 content and asset boundaries.
 
 - `content/projects/` mirrors the former `src/content/projects/` location.
